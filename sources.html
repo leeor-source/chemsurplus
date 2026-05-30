@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Sources (internal) — ChemSurplus</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#0e6b5c"/><path d="M16 9h8M17 9v7l-6 11a2 2 0 0 0 1.7 3h14.6a2 2 0 0 0 1.7-3l-6-11V9" stroke="#16c79a" stroke-width="2" stroke-linejoin="round"/></svg>
+      ChemSurplus <span class="tag tag--gray" style="margin-left:.4rem">internal</span></a>
+    <div class="nav__cta"><a href="aggregation.html" class="btn btn--ghost">Aggregation</a><a href="buy.html" class="btn btn--primary">Marketplace</a></div>
+  </div>
+</header>
+
+<!-- password gate -->
+<section class="section" id="gate">
+  <div class="container" style="max-width:420px">
+    <div class="form-wrap">
+      <div class="card__ic" style="margin:0 auto 1rem;background:var(--mint-soft)" id="lockIc"></div>
+      <h1 style="text-align:center;font-size:1.5rem">Data sources</h1>
+      <p class="muted center">This internal page lists every broker we aggregate inventory from. Enter the access code to continue.</p>
+      <form id="pwForm" class="mt-2">
+        <div class="field"><label>Access code<input id="pw" type="password" autocomplete="off" placeholder="••••••" autofocus></label></div>
+        <button class="btn btn--primary btn--block btn--lg" type="submit">Unlock</button>
+        <p id="pwErr" class="hidden mt-2 center" style="color:var(--danger);font-size:.88rem">Incorrect code — try again.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- content (revealed after unlock) -->
+<div id="content" class="hidden">
+  <section class="section--tight">
+    <div class="container">
+      <p class="eyebrow">Internal · data provenance</p>
+      <h1>Where the catalog comes from</h1>
+      <p class="lead">Every lot in the marketplace is aggregated from one of these verified broker sources. Pricing is held internally and surfaced only per-RFQ.</p>
+      <div class="dash-stats mt-3">
+        <div class="dash-stat"><div class="n" id="sLots">–</div><div class="l">aggregated lots</div></div>
+        <div class="dash-stat"><div class="n" id="sBrokers">–</div><div class="l">broker sources</div></div>
+        <div class="dash-stat"><div class="n" id="sSync">–</div><div class="l">last sync</div></div>
+        <div class="dash-stat"><div class="n">feed</div><div class="l">/api/ingest + broker-feeds.json</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight" style="background:#fff;border-top:1px solid var(--line)">
+    <div class="container">
+      <h2>Broker sources</h2>
+      <div style="overflow:auto">
+        <table class="table mt-2" id="srcTable">
+          <thead><tr><th>Broker</th><th>Source</th><th>Specialty</th><th>Regions</th><th>Lots</th><th>Synced</th><th>Status</th></tr></thead>
+          <tbody id="srcBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="container">
+      <h2>What each broker is contributing</h2>
+      <div id="brokerLots" class="mt-2"></div>
+    </div>
+  </section>
+
+  <section class="section--tight" style="background:#fff;border-top:1px solid var(--line)">
+    <div class="container prose">
+      <h2>Pipeline</h2>
+      <p class="muted"><code>data/broker-feeds.json</code> (or live <code>POST /api/ingest</code>) &rarr; <code>build-catalog.ps1</code> aggregates + normalizes + industry-tags &rarr; <code>assets/js/catalog.js</code> &rarr; the marketplace. Re-run the aggregator to re-sync.</p>
+      <p class="muted" style="font-size:.82rem"><strong>Note:</strong> this is a lightweight client-side gate for convenience, not real authentication — anyone determined can view the page source. The data here (broker names/links) is non-sensitive. For a truly private admin view, move this behind server-side auth.</p>
+    </div>
+  </section>
+</div>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/suppliers.js"></script>
+<script src="assets/js/catalog.js"></script>
+<script src="assets/js/data.js"></script>
+<script>
+  document.getElementById("lockIc").innerHTML = icon("shield");
+  var ACCESS_CODE = "123456";
+
+  function reveal() {
+    document.getElementById("gate").classList.add("hidden");
+    document.getElementById("content").classList.remove("hidden");
+    render();
+  }
+  document.getElementById("pwForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (document.getElementById("pw").value === ACCESS_CODE) {
+      try { sessionStorage.setItem("cs_src", "1"); } catch (e) {}
+      reveal();
+    } else {
+      document.getElementById("pwErr").classList.remove("hidden");
+    }
+  });
+  try { if (sessionStorage.getItem("cs_src") === "1") reveal(); } catch (e) {}
+
+  function render() {
+    var sources = (typeof CS_SOURCES !== "undefined") ? CS_SOURCES : [];
+    var byBroker = catalogByBroker();
+    document.getElementById("sLots").textContent = getAllListings().length;
+    document.getElementById("sBrokers").textContent = sources.length;
+    document.getElementById("sSync").textContent = sources.length ? sources[0].synced : "—";
+
+    document.getElementById("srcBody").innerHTML = sources.map(function (s) {
+      var info = (typeof supplierInfo === "function") ? supplierInfo(s.broker) : {};
+      var url = info.url ? '<a href="https://' + info.url + '" target="_blank" rel="noopener noreferrer">' + info.url + '</a>' : '—';
+      return '<tr><td><strong>' + s.name + '</strong>' + (info.since ? '<br><span class="muted" style="font-size:.78rem">since ' + info.since + '</span>' : '') + '</td>'
+        + '<td>' + url + '</td>'
+        + '<td style="max-width:240px"><span class="muted" style="font-size:.84rem">' + (info.specialty || '—') + '</span></td>'
+        + '<td><span class="muted" style="font-size:.84rem">' + (info.regions || '—') + '</span></td>'
+        + '<td><strong>' + s.lots + '</strong></td>'
+        + '<td><span class="muted" style="font-size:.84rem">' + s.synced + '</span></td>'
+        + '<td><span class="tag tag--green">Live</span></td></tr>';
+    }).join("");
+
+    // per-broker lot breakdown
+    var all = getAllListings();
+    var groups = {};
+    all.forEach(function (l) { (groups[l.supplier] = groups[l.supplier] || []).push(l); });
+    var order = sources.map(function (s) { return s.broker; });
+    document.getElementById("brokerLots").innerHTML = order.map(function (slug) {
+      var info = (typeof supplierInfo === "function") ? supplierInfo(slug) : { name: slug };
+      var lots = groups[slug] || [];
+      return '<details class="card" style="margin-bottom:.6rem"><summary style="cursor:pointer;font-family:var(--font-head);font-weight:600">'
+        + info.name + ' <span class="muted" style="font-weight:400">· ' + lots.length + ' lots</span></summary>'
+        + '<table class="table mt-2"><thead><tr><th>Lot</th><th>CAS</th><th>Qty</th><th>Condition</th></tr></thead><tbody>'
+        + lots.map(function (l) { return '<tr><td><a href="lot.html?id=' + l.id + '">' + l.name + '</a></td><td>' + l.cas + '</td><td>' + l.qty + '</td><td>' + l.condition + '</td></tr>'; }).join("")
+        + '</tbody></table></details>';
+    }).join("");
+  }
+</script>
+</body>
+</html>

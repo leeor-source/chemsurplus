@@ -647,3 +647,71 @@ const CS_CATALOG = [
         "supplier":  "sarren"
     }
 ];
+const CS_SOURCES = [
+    {
+        "broker":  "altiras",
+        "name":  "Altiras",
+        "lots":  6,
+        "synced":  "2026-05-30"
+    },
+    {
+        "broker":  "waste-optima",
+        "name":  "Waste Optima",
+        "lots":  4,
+        "synced":  "2026-05-30"
+    },
+    {
+        "broker":  "chemdeals",
+        "name":  "ChemDeals",
+        "lots":  3,
+        "synced":  "2026-05-30"
+    },
+    {
+        "broker":  "tychem",
+        "name":  "Tychem LLC",
+        "lots":  4,
+        "synced":  "2026-05-30"
+    },
+    {
+        "broker":  "allchem",
+        "name":  "Allchem LLC",
+        "lots":  2,
+        "synced":  "2026-05-30"
+    },
+    {
+        "broker":  "providence",
+        "name":  "Providence Chemical",
+        "lots":  2,
+        "synced":  "2026-05-30"
+    },
+    {
+        "broker":  "stobec",
+        "name":  "Stobec",
+        "lots":  1,
+        "synced":  "2026-05-30"
+    },
+    {
+        "broker":  "camachem",
+        "name":  "Camachem",
+        "lots":  1,
+        "synced":  "2026-05-30"
+    },
+    {
+        "broker":  "sur-intl",
+        "name":  "SUR+ International",
+        "lots":  1,
+        "synced":  "2026-05-30"
+    },
+    {
+        "broker":  "laballey",
+        "name":  "Lab Alley",
+        "lots":  1,
+        "synced":  "2026-05-30"
+    },
+    {
+        "broker":  "sarren",
+        "name":  "Sarren Chemicals",
+        "lots":  1,
+        "synced":  "2026-05-30"
+    }
+];
