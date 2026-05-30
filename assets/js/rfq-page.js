@@ -44,26 +44,40 @@
     if (r) { RFQ.remove(r.dataset.rfqRemove); render(); }
   });
 
-  /* submit */
+  /* submit — uses the live API when configured (CS_CONFIG.apiBase), else localStorage */
   const form = document.getElementById("rfqForm");
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     for (const f of form.querySelectorAll("[required]")) { if (!f.value) { f.focus(); f.style.borderColor = "var(--danger)"; return; } }
     const fd = new FormData(form);
-    const req = {
-      ref: "RFQ-" + (1000 + (RFQ.get().length * 13 % 9000)),
+    const payload = {
       company: fd.get("company"), email: fd.get("email"),
       location: fd.get("location"), timeline: fd.get("timeline"), notes: fd.get("notes"),
       lots: RFQ.get()
     };
+
+    const submitBtn = form.querySelector("[type=submit]");
+    submitBtn.disabled = true; submitBtn.textContent = "Sending…";
+
+    let ref = "RFQ-" + (1000 + (RFQ.get().length * 13 % 9000));
+    try {
+      if (window.CS_API && CS_API.enabled()) {
+        const r = await CS_API.post("/rfq", payload);   // real backend: persists + emails brokers
+        if (r && r.ref) ref = r.ref;
+      }
+    } catch (err) {
+      console.warn("API submit failed, saved locally instead", err);
+    }
+
     try {
       const hist = JSON.parse(localStorage.getItem("cs_rfq_requests") || "[]");
-      hist.unshift(req); localStorage.setItem("cs_rfq_requests", JSON.stringify(hist));
+      hist.unshift({ ref, ...payload }); localStorage.setItem("cs_rfq_requests", JSON.stringify(hist));
     } catch (err) {}
+
     RFQ.get().slice().forEach(id => RFQ.remove(id));   // clear list
     document.getElementById("rfqMain").classList.add("hidden");
     const ok = document.getElementById("rfqSuccess");
-    ok.querySelector("[data-ref]").textContent = req.ref;
+    ok.querySelector("[data-ref]").textContent = ref;
     ok.classList.remove("hidden");
     window.scrollTo({ top: 0, behavior: "smooth" });
   });

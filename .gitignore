@@ -12,3 +12,9 @@ Thumbs.db
 
 # transient gh device-login log
 .ghauth.log
+
+# backend
+node_modules/
+.env
+.env.local
+.vercel

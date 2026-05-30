@@ -1,0 +1,13 @@
+{
+  "name": "chemsurplus",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ChemSurplus — SEO-led, industry-personalized surplus chemicals marketplace (static frontend + serverless API).",
+  "scripts": {
+    "dev": "echo \"Static site: open index.html or run serve.ps1. API: deploy to Vercel (vercel dev for local functions).\""
+  },
+  "dependencies": {
+    "@vercel/kv": "^2.0.0"
+  }
+}

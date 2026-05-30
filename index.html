@@ -91,7 +91,7 @@
       <li><a href="#industries">Industries</a></li>
     </ul>
     <div class="nav__cta">
-      <a href="sell.html" class="btn btn--ghost">List surplus</a>
+      <a href="rfq.html" class="btn btn--ghost">RFQ list <span class="rfq-badge hidden" data-rfq-count>0</span></a>
       <a href="buy.html" class="btn btn--primary">Browse marketplace</a>
       <button class="nav__toggle" data-nav-toggle aria-label="Menu">
         <svg width="26" height="26" viewBox="0 0 24 24" stroke="#0a1f1b" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -181,9 +181,9 @@
 <!-- ===== Trust bar ===== -->
 <div class="trustbar">
   <div class="container trustbar__row">
-    <span>Trusted by procurement &amp; plant teams sourcing from</span>
-    <span><strong>Manufacturers</strong></span><span><strong>Distributors</strong></span>
-    <span><strong>Contract Labs</strong></span><span><strong>Formulators</strong></span><span><strong>Brokers</strong></span>
+    <span>Aggregating verified surplus from leading brokers</span>
+    <span><strong>ChemDeals</strong></span><span><strong>Altiras</strong></span>
+    <span><strong>Tychem LLC</strong></span><span><strong>Waste Optima</strong></span><span><strong>SUR+ International</strong></span>
   </div>
 </div>
 
@@ -313,8 +313,10 @@
 </footer>
 
 <script src="assets/js/app.js"></script>
+<script src="assets/js/suppliers.js"></script>
 <script src="assets/js/industries.js"></script>
 <script src="assets/js/data.js"></script>
+<script src="assets/js/rfq.js"></script>
 <script>
   /* industry selector cards */
   document.getElementById("indGrid").innerHTML = INDUSTRIES.map(i =>
