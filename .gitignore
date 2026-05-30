@@ -9,3 +9,6 @@ Thumbs.db
 # Note: categories/*.html and sitemap.xml ARE generated, but committed
 # so the site deploys without running build-seo.ps1. Regenerate via:
 #   powershell -ExecutionPolicy Bypass -File build-seo.ps1
+
+# transient gh device-login log
+.ghauth.log
