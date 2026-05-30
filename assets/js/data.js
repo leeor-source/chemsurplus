@@ -1,0 +1,104 @@
+/* ============================================================
+   ChemSurplus — shared data layer
+   Categories + seed marketplace listings (client-side demo data).
+   New seller submissions are merged from localStorage at runtime.
+   ============================================================ */
+
+const CATEGORIES = [
+  { slug: "solvents",            name: "Solvents",              icon: "flask" },
+  { slug: "specialty-chemicals", name: "Specialty Chemicals",   icon: "beaker" },
+  { slug: "resins-coatings",     name: "Resins & Coatings",     icon: "drop" },
+  { slug: "lab-reagents",        name: "Lab Reagents",          icon: "vial" },
+  { slug: "surfactants",         name: "Surfactants",           icon: "bubbles" },
+  { slug: "acids-bases",         name: "Acids & Bases",         icon: "hazard" },
+  { slug: "polymers-additives",  name: "Polymers & Additives",  icon: "grid" },
+  { slug: "intermediates",       name: "Intermediates",         icon: "atom" }
+];
+
+const PACKAGING = ["Drums", "IBC Totes", "Supersacks", "Pails", "Bottles", "Bulk / Tanker", "Cylinders"];
+const CONDITIONS = ["Unopened / Sealed", "Off-spec", "Short-dated", "Overstock", "Discontinued SKU"];
+const REGIONS = ["US – Midwest", "US – Gulf Coast", "US – Northeast", "US – West", "EU", "Asia"];
+
+/* Supplier brokerages we aggregate (ChemSurplus is the interface; these hold the stock).
+   SUPPLIERS + supplierName()/supplierInfo() are provided by the generated assets/js/suppliers.js
+   (source of truth: seo/suppliers.json). Fallback below in case suppliers.js isn't loaded. */
+if (typeof supplierName === "undefined") {
+  window.supplierName = function (slug) { return slug || "Verified supplier"; };
+  window.supplierInfo = function (slug) { return { name: slug, tier: "Verified broker" }; };
+}
+
+/* Compliance badges derived from a lot's grade/docs (USP, ACS, Food, Kosher, Halal). */
+function complianceBadges(l) {
+  const out = [];
+  const g = (l.grade || "") + " " + (l.docs || []).join(" ");
+  if (/USP|EP\b/i.test(g)) out.push("USP/EP");
+  if (/ACS/i.test(g)) out.push("ACS");
+  if (/Food/i.test(g)) out.push("Food grade");
+  if (/Kosher/i.test(g)) out.push("Kosher");
+  if (/Halal/i.test(g)) out.push("Halal");
+  return out;
+}
+
+/* Seed listings — representative surplus lots.
+   `supplier` = brokerage that holds the stock; `industries` = verticals it's relevant to. */
+const SEED_LISTINGS = [
+  { id:"L-1001", name:"Isopropyl Alcohol (IPA) 99.9%", cat:"solvents", cas:"67-63-0", grade:"Technical", qty:"18 drums (208L)", pkg:"Drums", condition:"Overstock", region:"US – Midwest", price:1.95, list:3.40, unit:"/ kg", docs:["SDS","COA"], dated:"Best by 2027-04", supplier:"altiras", industries:["pharma","cleaning","coatings","personal-care"] },
+  { id:"L-1002", name:"Titanium Dioxide R-902", cat:"specialty-chemicals", cas:"13463-67-7", grade:"Pigment", qty:"12 supersacks (1MT)", pkg:"Supersacks", condition:"Discontinued SKU", region:"US – Gulf Coast", price:2.10, list:3.85, unit:"/ kg", docs:["SDS","COA","TDS"], dated:"No expiry", supplier:"waste-optima", industries:["coatings","plastics"] },
+  { id:"L-1003", name:"Acrylic Resin Emulsion AC-261", cat:"resins-coatings", cas:"Mixture", grade:"Coatings", qty:"6 IBC totes (1000L)", pkg:"IBC Totes", condition:"Short-dated", region:"US – Northeast", price:1.15, list:2.60, unit:"/ kg", docs:["SDS","TDS"], dated:"Best by 2026-11", supplier:"waste-optima", industries:["coatings","adhesives"] },
+  { id:"L-1004", name:"Sodium Lauryl Ether Sulfate (SLES 70%)", cat:"surfactants", cas:"68585-34-2", grade:"Cosmetic", qty:"22 drums (200kg)", pkg:"Drums", condition:"Overstock", region:"EU", price:0.98, list:1.75, unit:"/ kg", docs:["SDS","COA"], dated:"Best by 2027-01", supplier:"chemdeals", industries:["personal-care","cleaning"] },
+  { id:"L-1005", name:"Citric Acid Anhydrous USP", cat:"acids-bases", cas:"77-92-9", grade:"USP/Food", qty:"40 bags (25kg)", pkg:"Supersacks", condition:"Unopened / Sealed", region:"US – West", price:1.20, list:2.05, unit:"/ kg", docs:["SDS","COA","Kosher"], dated:"Best by 2028-03", supplier:"tychem", industries:["food","pharma","cleaning","water-treatment"] },
+  { id:"L-1006", name:"Polyethylene Glycol PEG-400", cat:"polymers-additives", cas:"25322-68-3", grade:"Industrial", qty:"15 drums (230kg)", pkg:"Drums", condition:"Off-spec", region:"US – Gulf Coast", price:1.40, list:2.95, unit:"/ kg", docs:["SDS","COA"], dated:"No expiry", supplier:"allchem", industries:["plastics","personal-care","pharma","adhesives"] },
+  { id:"L-1007", name:"Acetone Technical Grade", cat:"solvents", cas:"67-64-1", grade:"Technical", qty:"Bulk – 1 tanker (20MT)", pkg:"Bulk / Tanker", condition:"Overstock", region:"US – Midwest", price:0.85, list:1.45, unit:"/ kg", docs:["SDS","COA"], dated:"No expiry", supplier:"altiras", industries:["coatings","cleaning","pharma"] },
+  { id:"L-1008", name:"Methylene Blue Reagent ACS", cat:"lab-reagents", cas:"61-73-4", grade:"ACS Reagent", qty:"60 bottles (500g)", pkg:"Bottles", condition:"Short-dated", region:"US – Northeast", price:0.42, list:0.95, unit:"/ g", docs:["SDS","COA"], dated:"Best by 2026-09", supplier:"laballey", industries:["pharma"] },
+  { id:"L-1009", name:"Propylene Glycol USP/EP", cat:"intermediates", cas:"57-55-6", grade:"USP", qty:"9 IBC totes (1040kg)", pkg:"IBC Totes", condition:"Overstock", region:"US – West", price:1.05, list:1.90, unit:"/ kg", docs:["SDS","COA"], dated:"Best by 2027-08", supplier:"providence", industries:["pharma","personal-care","food"] },
+  { id:"L-1010", name:"Xanthan Gum Food Grade", cat:"specialty-chemicals", cas:"11138-66-2", grade:"Food", qty:"30 bags (25kg)", pkg:"Supersacks", condition:"Discontinued SKU", region:"EU", price:3.80, list:7.20, unit:"/ kg", docs:["SDS","COA","Halal"], dated:"Best by 2027-02", supplier:"chemdeals", industries:["food","personal-care"] },
+  { id:"L-1011", name:"Epoxy Resin Bisphenol-A (EEW 187)", cat:"resins-coatings", cas:"25068-38-6", grade:"Industrial", qty:"20 drums (250kg)", pkg:"Drums", condition:"Off-spec", region:"Asia", price:2.20, list:4.10, unit:"/ kg", docs:["SDS","TDS"], dated:"No expiry", supplier:"stobec", industries:["coatings","adhesives","plastics"] },
+  { id:"L-1012", name:"Sodium Hydroxide Pearls 99%", cat:"acids-bases", cas:"1310-73-2", grade:"Technical", qty:"32 bags (25kg)", pkg:"Supersacks", condition:"Overstock", region:"US – Midwest", price:0.70, list:1.30, unit:"/ kg", docs:["SDS","COA"], dated:"No expiry", supplier:"tychem", industries:["cleaning","water-treatment","plastics"] },
+  { id:"L-1013", name:"Cocamidopropyl Betaine (CAPB 30%)", cat:"surfactants", cas:"61789-40-0", grade:"Cosmetic", qty:"14 drums (200kg)", pkg:"Drums", condition:"Short-dated", region:"US – West", price:1.30, list:2.45, unit:"/ kg", docs:["SDS","COA"], dated:"Best by 2026-12", supplier:"chemdeals", industries:["personal-care","cleaning"] },
+  { id:"L-1014", name:"Toluene ACS Reagent", cat:"solvents", cas:"108-88-3", grade:"ACS", qty:"25 cans (18L)", pkg:"Pails", condition:"Unopened / Sealed", region:"US – Gulf Coast", price:1.10, list:2.00, unit:"/ kg", docs:["SDS","COA"], dated:"No expiry", supplier:"altiras", industries:["coatings","adhesives","pharma"] },
+  { id:"L-1015", name:"Calcium Carbonate (Coated) 2µm", cat:"polymers-additives", cas:"471-34-1", grade:"Filler", qty:"18 supersacks (1MT)", pkg:"Supersacks", condition:"Overstock", region:"EU", price:0.32, list:0.68, unit:"/ kg", docs:["SDS","TDS"], dated:"No expiry", supplier:"camachem", industries:["plastics","coatings"] },
+  { id:"L-1016", name:"Glycerin USP 99.7% (Kosher)", cat:"intermediates", cas:"56-81-5", grade:"USP", qty:"11 IBC totes (1250kg)", pkg:"IBC Totes", condition:"Overstock", region:"US – Northeast", price:1.45, list:2.30, unit:"/ kg", docs:["SDS","COA","Kosher"], dated:"Best by 2028-01", supplier:"providence", industries:["pharma","personal-care","food"] },
+  { id:"L-1017", name:"Zinc Oxide USP (Pharma)", cat:"specialty-chemicals", cas:"1314-13-2", grade:"USP", qty:"24 bags (25kg)", pkg:"Supersacks", condition:"Short-dated", region:"Asia", price:2.60, list:4.50, unit:"/ kg", docs:["SDS","COA"], dated:"Best by 2026-10", supplier:"sur-intl", industries:["pharma","personal-care"] },
+  { id:"L-1018", name:"Ethyl Acetate Technical", cat:"solvents", cas:"141-78-6", grade:"Technical", qty:"Bulk – 16 totes (1000L)", pkg:"IBC Totes", condition:"Discontinued SKU", region:"US – Midwest", price:0.95, list:1.70, unit:"/ kg", docs:["SDS","COA"], dated:"No expiry", supplier:"altiras", industries:["coatings","adhesives"] }
+];
+
+/* discount helper */
+function pctOff(price, list) { return Math.round((1 - price / list) * 100); }
+
+/* merge seed + seller-submitted (localStorage) */
+function getAllListings() {
+  let custom = [];
+  try { custom = JSON.parse(localStorage.getItem("cs_listings") || "[]"); } catch (e) {}
+  return [...custom, ...SEED_LISTINGS];
+}
+
+function catName(slug) {
+  const c = CATEGORIES.find(c => c.slug === slug);
+  return c ? c.name : slug;
+}
+
+/* ---- Industry personalization ----
+   INDUSTRIES is defined in assets/js/industries.js (generated from seo/industries.json). */
+function getIndustryMeta(slug) {
+  return (typeof INDUSTRIES !== "undefined") ? INDUSTRIES.find(i => i.slug === slug) : null;
+}
+function industryName(slug) {
+  const i = getIndustryMeta(slug);
+  return i ? i.name : null;
+}
+/* the buyer's chosen industry (persisted) */
+function getIndustry() {
+  try { return localStorage.getItem("cs_industry") || ""; } catch (e) { return ""; }
+}
+function setIndustry(slug) {
+  try { slug ? localStorage.setItem("cs_industry", slug) : localStorage.removeItem("cs_industry"); } catch (e) {}
+}
+/* listings relevant to an industry (by tag OR by the industry's category set) */
+function listingsForIndustry(slug, list) {
+  list = list || getAllListings();
+  if (!slug) return list;
+  const meta = getIndustryMeta(slug);
+  const cats = meta ? (meta.categories || []) : [];
+  return list.filter(l =>
+    (l.industries && l.industries.includes(slug)) || cats.includes(l.cat));
+}

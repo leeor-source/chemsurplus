@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sell Surplus Chemicals | Liquidate Excess & Obsolete Inventory — ChemSurplus</title>
+<meta name="description" content="Sell surplus, excess, obsolete and off-spec chemical inventory. Recover value, avoid disposal costs and free warehouse space. Free listing — upload SDS/COA and reach verified buyers worldwide.">
+<link rel="canonical" href="https://www.chemsurplus.com/sell.html">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Sell Surplus Chemicals — ChemSurplus">
+<meta property="og:description" content="Turn excess and obsolete chemical inventory into revenue. Recover value, avoid disposal costs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.chemsurplus.com/sell.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"HowTo","name":"How to sell surplus chemicals on ChemSurplus",
+  "step":[
+    {"@type":"HowToStep","name":"List your lot","text":"Add chemical, grade, quantity, packaging and upload SDS/COA."},
+    {"@type":"HowToStep","name":"Get verified & matched","text":"We verify your lot and match it to compliant qualified buyers."},
+    {"@type":"HowToStep","name":"Sell or broker","text":"Accept a buy-out offer or list on brokerage to recover value."}
+  ]}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#0e6b5c"/><path d="M16 9h8M17 9v7l-6 11a2 2 0 0 0 1.7 3h14.6a2 2 0 0 0 1.7-3l-6-11V9" stroke="#16c79a" stroke-width="2" stroke-linejoin="round"/></svg>
+      ChemSurplus</a>
+    <ul class="nav__links">
+      <li><a href="buy.html">Buy chemicals</a></li><li><a href="sell.html">Sell surplus</a></li>
+      <li><a href="how-it-works.html">How it works</a></li><li><a href="#dashboard">Dashboard</a></li>
+    </ul>
+    <div class="nav__cta">
+      <a href="buy.html" class="btn btn--ghost">Browse marketplace</a>
+      <a href="#listForm" class="btn btn--primary">List a lot</a>
+      <button class="nav__toggle" data-nav-toggle aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" stroke="#0a1f1b" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- intro + calculator -->
+<section class="section--tight" style="background:
+  radial-gradient(900px 400px at 85% 0%, rgba(22,199,154,.14), transparent 60%);">
+  <div class="container grid grid--2" style="align-items:center">
+    <div>
+      <p class="eyebrow">Seller — first users</p>
+      <h1>Sell surplus chemicals. Recover value, not disposal bills.</h1>
+      <p class="lead">Excess, obsolete, off-spec or short-dated stock ties up capital and warehouse space — and disposal costs money. List it on ChemSurplus and turn it back into revenue with verified buyers worldwide.</p>
+      <div class="badge-row mt-2">
+        <span class="tag tag--green">Free to list</span>
+        <span class="tag tag--green">Buy-out or brokerage</span>
+        <span class="tag tag--green">Hazmat logistics handled</span>
+      </div>
+    </div>
+
+    <!-- value recovery calculator -->
+    <div class="form-wrap" id="calculator">
+      <h3>Value recovery calculator</h3>
+      <p class="muted" style="font-size:.9rem">Estimate what you could recover vs. paying to dispose.</p>
+      <form id="calcForm">
+        <div class="field-row">
+          <div class="field"><label>Quantity (kg)<input id="cQty" type="number" value="5000" min="0"></label></div>
+          <div class="field"><label>Book cost ($/kg)<input id="cCost" type="number" value="2.20" step="0.01" min="0"></label></div>
+        </div>
+        <div class="field"><label>Disposal cost you'd otherwise pay ($/kg) <span class="hint">hazmat disposal is often $1–4/kg</span><input id="cDisposal" type="number" value="1.50" step="0.10" min="0"></label></div>
+      </form>
+      <div class="calc-out mt-2">
+        <small>Estimated total benefit</small>
+        <div class="big" id="cTotal">$0</div>
+        <div class="flex between mt-2" style="font-size:.9rem">
+          <span>Value recovered: <strong id="cRecovered">$0</strong></span>
+          <span>Disposal avoided: <strong id="cAvoided">$0</strong></span>
+        </div>
+      </div>
+      <p class="muted mt-2" style="font-size:.78rem">Illustrative estimate (≈40% recovery of book value). Actual offers depend on chemical, grade, shelf life, packaging and quantity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- why sell -->
+<section class="section--tight">
+  <div class="container grid grid--3">
+    <div class="card"><div class="card__ic" id="s1"></div><h3>Avoid disposal costs</h3><p class="muted">The EPA recommends reuse before disposal — reclaimed chemicals aren't classed as waste. Stop paying to destroy usable inventory.</p></div>
+    <div class="card"><div class="card__ic" id="s2"></div><h3>Free warehouse space</h3><p class="muted">Clear drums, totes and supersacks of dead stock and reclaim space for products that move.</p></div>
+    <div class="card"><div class="card__ic" id="s3"></div><h3>Recover working capital</h3><p class="muted">Convert written-down inventory back into cash through buy-out or brokerage deals.</p></div>
+  </div>
+</section>
+
+<!-- listing form -->
+<section class="section" id="listForm" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="container" style="max-width:760px">
+    <div class="center"><p class="eyebrow">List your surplus</p><h2>Create a listing in three steps</h2></div>
+
+    <div class="stepper mt-4">
+      <div class="stepper__item active">1 · Material</div>
+      <div class="stepper__item">2 · Quantity &amp; packaging</div>
+      <div class="stepper__item">3 · Pricing &amp; docs</div>
+    </div>
+
+    <form id="listForm" class="form-wrap">
+      <!-- step 1 -->
+      <div data-step="0">
+        <div class="field"><label>Chemical / product name *<input name="name" required placeholder="e.g. Isopropyl Alcohol (IPA) 99.9%"></label></div>
+        <div class="field-row">
+          <div class="field"><label>Category *<select name="cat" id="fCat" required></select></label></div>
+          <div class="field"><label>CAS number <span class="hint">optional</span><input name="cas" placeholder="67-63-0"></label></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>Grade<input name="grade" placeholder="Technical / USP / ACS…"></label></div>
+          <div class="field"><label>Condition *<select name="cond" id="fCond" required></select></label></div>
+        </div>
+        <div class="flex" style="justify-content:flex-end"><button class="btn btn--primary" data-next>Continue →</button></div>
+      </div>
+
+      <!-- step 2 -->
+      <div data-step="1" class="hidden">
+        <div class="field-row">
+          <div class="field"><label>Quantity available *<input name="qty" required placeholder="e.g. 18 drums (208L)"></label></div>
+          <div class="field"><label>Packaging *<select name="pkg" id="fPkg" required></select></label></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>Region / location *<select name="fRegion" id="fRegion" required></select></label></div>
+          <div class="field"><label>Shelf life / best-by<input name="dated" placeholder="e.g. Best by 2027-04 or No expiry"></label></div>
+        </div>
+        <div class="flex between"><button class="btn btn--ghost" data-prev>← Back</button><button class="btn btn--primary" data-next>Continue →</button></div>
+      </div>
+
+      <!-- step 3 -->
+      <div data-step="2" class="hidden">
+        <div class="field-row--3">
+          <div class="field"><label>Asking price *<input name="price" type="number" step="0.01" min="0" required placeholder="1.95"></label></div>
+          <div class="field"><label>Unit<select name="unit"><option>kg</option><option>g</option><option>L</option><option>lot</option></select></label></div>
+          <div class="field"><label>COA available?<select name="coa"><option value="yes">Yes</option><option value="">No</option></select></label></div>
+        </div>
+        <div class="field"><label>Upload documentation (SDS required) <span class="hint">SDS, COA, TDS</span>
+          <input type="file" name="docs" multiple accept=".pdf,.doc,.docx,image/*"></label></div>
+        <div class="field"><label class="filter-opt"><input type="checkbox" required> I confirm this material is accurately described and legally able to be transferred.</label></div>
+        <div class="flex between"><button class="btn btn--ghost" data-prev>← Back</button><button class="btn btn--accent" type="submit">Submit listing</button></div>
+      </div>
+    </form>
+
+    <!-- success -->
+    <div id="listSuccess" class="form-wrap hidden center" style="border-color:var(--mint)">
+      <div class="card__ic" style="margin:0 auto 1rem;width:60px;height:60px;background:var(--mint-soft)" id="okIcon"></div>
+      <h2>Listing submitted 🎉</h2>
+      <p class="muted">Your lot is now in review and appears in your dashboard below. Once verified it goes live to qualified buyers. We'll be in touch with buy-out or brokerage options.</p>
+      <div class="flex gap" style="justify-content:center"><a href="#dashboard" class="btn btn--primary">View dashboard</a><a href="buy.html" class="btn btn--ghost">See it in the marketplace</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- seller dashboard -->
+<section class="section" id="dashboard">
+  <div class="container">
+    <p class="eyebrow">Seller dashboard</p>
+    <h2>Your surplus inventory</h2>
+    <div class="dash-stats mt-3">
+      <div class="dash-stat"><div class="n" id="dsCount">0</div><div class="l">Active listings</div></div>
+      <div class="dash-stat"><div class="n" id="dsValue">$0</div><div class="l">Est. recoverable value</div></div>
+      <div class="dash-stat"><div class="n">24h</div><div class="l">Avg. verification time</div></div>
+      <div class="dash-stat"><div class="n">Global</div><div class="l">Buyer reach</div></div>
+    </div>
+    <table class="table">
+      <thead><tr><th>Lot</th><th>Packaging</th><th>Price</th><th>Status</th><th></th></tr></thead>
+      <tbody id="dashBody"></tbody>
+    </table>
+    <p class="muted mt-2" style="font-size:.82rem">Demo dashboard — listings are stored locally in your browser so you can see the full seller flow end-to-end.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border:0;margin:0;padding:0">
+      <span>© 2026 ChemSurplus — sell surplus chemicals.</span>
+      <span><a href="index.html" style="color:#9fb3ad">Home</a> · <a href="buy.html" style="color:#9fb3ad">Buy chemicals</a> · <a href="how-it-works.html" style="color:#9fb3ad">How it works</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/sell.js"></script>
+<script>
+  document.getElementById("s1").innerHTML = icon("hazard");
+  document.getElementById("s2").innerHTML = icon("truck");
+  document.getElementById("s3").innerHTML = icon("cash");
+  document.getElementById("okIcon").innerHTML = icon("shield");
+</script>
+</body>
+</html>

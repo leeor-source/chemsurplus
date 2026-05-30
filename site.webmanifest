@@ -1,0 +1,12 @@
+{
+  "name": "ChemSurplus",
+  "short_name": "ChemSurplus",
+  "description": "The B2B marketplace for surplus, excess & obsolete chemicals — personalized to your industry.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f6faf8",
+  "theme_color": "#0e6b5c",
+  "icons": [
+    { "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

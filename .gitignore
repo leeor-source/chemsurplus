@@ -1,0 +1,11 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+*.log
+
+# Local preview / runtime
+.claude/settings.local.json
+
+# Note: categories/*.html and sitemap.xml ARE generated, but committed
+# so the site deploys without running build-seo.ps1. Regenerate via:
+#   powershell -ExecutionPolicy Bypass -File build-seo.ps1

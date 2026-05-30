@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "purpose": "Consolidated research on existing surplus-chemical brokerages. These are the ACTUAL suppliers; ChemSurplus is the clean discovery/interface layer that aggregates their offerings and personalizes them by industry.",
+    "researched": "2026-05-30",
+    "method": "Live SERP + page review of public brokerage sites",
+    "commonUxProblems": [
+      "Raw paginated inventory tables with no filtering or search",
+      "Contact-form-to-inquire on every item — no self-serve discovery",
+      "No personalization: every visitor sees the same firehose regardless of industry",
+      "Dated 2000s-era visual design, poor mobile experience",
+      "Documentation (SDS/COA) hard to find or absent from listings",
+      "No structured categories or industry framing — buyers must already know the exact chemical"
+    ],
+    "ourWedge": "Keep the brokerages as supply. Add the layer they lack: industry-personalized discovery, clean documented listings, search/filter, and one front door across many suppliers."
+  },
+
+  "suppliers": [
+    { "slug": "chemdeals",   "name": "ChemDeals",                 "url": "chemdeals.com",            "since": null, "specialty": "Broad surplus & obsolete, documentation-first", "packaging": ["Drums","IBC Totes","Supersacks","Bulk"], "regions": ["US","Global"], "industries": ["pharma","personal-care","coatings","cleaning","food","plastics","water-treatment","adhesives","rubber","wire-cable"], "uxIssues": ["Legacy ASP site","No self-serve search/filter","Industry list buried in body copy"] },
+    { "slug": "altiras",     "name": "Altiras",                   "url": "altiras.com",              "since": null, "specialty": "Off-spec / wide-spec solvents, alcohols, acids, caustics, fuels — bulk", "packaging": ["Bulk Tank","Rail","Truck","Drums","IBC Totes"], "regions": ["US – Gulf Coast","US"], "industries": ["coatings","cleaning","pharma","oil-gas","water-treatment"], "uxIssues": ["Paginated raw table","Contact-form-to-inquire, no pricing shown","No industry framing"] },
+    { "slug": "tychem",      "name": "Tychem LLC",                "url": "tychem.net",               "since": 2001, "specialty": "Industrial commodities: sodium hydroxide, citric acid, glycerin", "packaging": ["Drums","Supersacks","Bulk"], "regions": ["US"], "industries": ["cleaning","water-treatment","food","plastics","pharma"], "uxIssues": ["Dated design","Flat product list","No documentation surfaced"] },
+    { "slug": "waste-optima","name": "Waste Optima",              "url": "wasteoptima.com",          "since": null, "specialty": "Specialty: acrylic resins, latex emulsions, coatings binders, pigments", "packaging": ["Drums","IBC Totes","Supersacks"], "regions": ["US"], "industries": ["coatings","adhesives","plastics"], "uxIssues": ["Lead-gen funnel over catalog","Min. one truckload — no small lots","Sourcing by request only"] },
+    { "slug": "providence",  "name": "Providence Chemical",       "url": "providencechemical.com",   "since": null, "specialty": "Near-expiry / short-dated chemicals below market", "packaging": ["Drums","IBC Totes","Pails"], "regions": ["US"], "industries": ["pharma","personal-care","food","cleaning"], "uxIssues": ["Sparse listings","No filtering","No shelf-life clarity on page"] },
+    { "slug": "allchem",     "name": "Allchem LLC",               "url": "allchem-llc.com",          "since": null, "specialty": "By-product streams & PEGs (PEG 200–8000)", "packaging": ["Drums","IBC Totes","Bulk"], "regions": ["US","Global"], "industries": ["plastics","personal-care","pharma","adhesives"], "uxIssues": ["Text-heavy","No structured catalog","Inquiry-only"] },
+    { "slug": "stobec",      "name": "Stobec Chemical Surplus",   "url": "stobec.com",               "since": 1976, "specialty": "Long-established broad surplus broker (~48 yrs)", "packaging": ["Drums","Pails","Bottles"], "regions": ["US","Canada"], "industries": ["coatings","adhesives","plastics","research"], "uxIssues": ["Very dated UI","Hard to browse","No images/docs"] },
+    { "slug": "ace",         "name": "Advanced Chemical Exchange","url": "acechemsurplus.com",       "since": 1994, "specialty": "Purchasing, selling & brokering surplus inventories (~30 yrs)", "packaging": ["Drums","IBC Totes","Bulk"], "regions": ["US"], "industries": ["coatings","cleaning","plastics","oil-gas"], "uxIssues": ["Plain HTML","No search","Phone/email driven"] },
+    { "slug": "sur-intl",    "name": "SUR+ International",         "url": "surplus-inter.com",        "since": null, "specialty": "Global recycling & repurposing of surplus chemicals", "packaging": ["Drums","Supersacks","Bulk"], "regions": ["Global","EU","Asia"], "industries": ["pharma","personal-care","plastics","coatings"], "uxIssues": ["Marketing site, thin inventory","No live catalog"] },
+    { "slug": "laballey",    "name": "Lab Alley",                 "url": "laballey.com",             "since": null, "specialty": "Lab & reagent-grade surplus and excess supplies", "packaging": ["Bottles","Pails","Drums"], "regions": ["US"], "industries": ["pharma","research","personal-care"], "uxIssues": ["Surplus buried under main store","Email inquiry for surplus"] },
+    { "slug": "repurposed",  "name": "repurposedMATERIALS",       "url": "repurposedmaterialsinc.com","since": null,"specialty": "Discounted commercial & by-product surplus chemicals", "packaging": ["Drums","Pails","Supersacks"], "regions": ["US"], "industries": ["cleaning","water-treatment","plastics"], "uxIssues": ["General-surplus site, chemicals are a side category","No chem-specific filters"] },
+    { "slug": "camachem",    "name": "Camachem",                  "url": "camachem.com",             "since": null, "specialty": "Bulk industrial & commodity chemicals", "packaging": ["Supersacks","Drums","Bulk"], "regions": ["Global","Asia"], "industries": ["water-treatment","plastics","coatings","cleaning"], "uxIssues": ["High-volume catalog, weak surplus distinction","Cluttered listings"] }
+  ]
+}

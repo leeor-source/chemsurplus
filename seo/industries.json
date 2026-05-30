@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "purpose": "Industry verticals that personalize the ChemSurplus experience. A buyer picks one industry and only sees surplus relevant to it. Source of truth for assets/js/industries.js (generated) and industries/*.html landing pages.",
+    "lastUpdated": "2026-05-30",
+    "basis": "Industry segmentation used by real brokerages (ChemDeals: Paints & Coatings, Cleaning, Food, Plastics, Water Treatment, Adhesives, Wire & Cable, Pharma & Cosmetics, Rubber, Research) + supplier mapping from suppliers.json"
+  },
+  "industries": [
+    {
+      "slug": "pharma", "name": "Pharmaceuticals", "icon": "pill",
+      "tagline": "USP/EP-grade surplus, reagents and solvents — documented and below market.",
+      "categories": ["lab-reagents","intermediates","specialty-chemicals","solvents","acids-bases"],
+      "exampleChemicals": ["Propylene Glycol USP","Glycerin USP","Citric Acid USP","Zinc Oxide USP","Methylene Blue ACS","Isopropyl Alcohol 99.9%"],
+      "suppliers": ["chemdeals","providence","laballey","sur-intl","altiras"],
+      "pains": ["Tight spec & documentation requirements","Short-dated excipients lose value fast","Disposal of regulated material is costly"],
+      "title": "Surplus Chemicals for the Pharmaceutical Industry | USP & Reagent Grade — ChemSurplus",
+      "metaDescription": "Source surplus pharmaceutical chemicals — USP/EP excipients, ACS reagents and pharma-grade solvents — with COA on every lot, 30–70% below market. Personalized to pharma only."
+    },
+    {
+      "slug": "personal-care", "name": "Personal Care & Cosmetics", "icon": "sparkle",
+      "tagline": "Cosmetic-grade surfactants, humectants and actives for formulation.",
+      "categories": ["surfactants","specialty-chemicals","intermediates","solvents"],
+      "exampleChemicals": ["SLES 70%","Cocamidopropyl Betaine","Glycerin USP","Propylene Glycol","Xanthan Gum","Zinc Oxide USP"],
+      "suppliers": ["chemdeals","providence","allchem","sur-intl","laballey"],
+      "pains": ["Cosmetic-grade certification needed","Trend-driven SKUs become excess fast","Small-batch formulators priced out of prime"],
+      "title": "Surplus Chemicals for Personal Care & Cosmetics | Surfactants & Actives — ChemSurplus",
+      "metaDescription": "Buy surplus personal-care and cosmetic chemicals — SLES, cocamidopropyl betaine, glycerin, xanthan gum — cosmetic-grade with COA, 30–70% below market."
+    },
+    {
+      "slug": "coatings", "name": "Paints & Coatings", "icon": "brush",
+      "tagline": "Resins, emulsions, pigments and solvents from coatings makers clearing stock.",
+      "categories": ["resins-coatings","solvents","polymers-additives","specialty-chemicals"],
+      "exampleChemicals": ["Acrylic Resin Emulsion","Epoxy Resin (Bisphenol-A)","Titanium Dioxide R-902","Calcium Carbonate (coated)","Toluene","Ethyl Acetate","Acetone"],
+      "suppliers": ["waste-optima","altiras","stobec","ace","chemdeals"],
+      "pains": ["Formulation/run changes strand binders & pigments","Solvent overstock ties up capital","Color/SKU obsolescence"],
+      "title": "Surplus Chemicals for Paints & Coatings | Resins, Pigments & Solvents — ChemSurplus",
+      "metaDescription": "Source surplus coatings chemicals — acrylic emulsions, epoxy resins, titanium dioxide, solvents — verified and 30–70% below market. Tailored to the coatings industry."
+    },
+    {
+      "slug": "cleaning", "name": "Cleaning & Detergents", "icon": "spray",
+      "tagline": "Surfactants, builders, acids and caustics for cleaning formulation.",
+      "categories": ["surfactants","acids-bases","solvents","specialty-chemicals"],
+      "exampleChemicals": ["SLES 70%","Cocamidopropyl Betaine","Sodium Hydroxide Pearls","Citric Acid","Isopropyl Alcohol"],
+      "suppliers": ["chemdeals","tychem","altiras","repurposed","ace"],
+      "pains": ["Commodity margins demand low input cost","Bulk caustics/acids need hazmat logistics","Private-label SKU churn"],
+      "title": "Surplus Chemicals for Cleaning & Detergents | Surfactants & Builders — ChemSurplus",
+      "metaDescription": "Buy surplus cleaning chemicals — surfactants, caustic soda, citric acid, solvents — below market with documentation and hazmat-ready logistics."
+    },
+    {
+      "slug": "food", "name": "Food & Beverage", "icon": "food",
+      "tagline": "Food-grade acids, humectants and hydrocolloids with the certs you need.",
+      "categories": ["specialty-chemicals","acids-bases","intermediates"],
+      "exampleChemicals": ["Citric Acid Anhydrous USP/Food","Xanthan Gum Food Grade","Glycerin USP (Kosher)","Propylene Glycol USP"],
+      "suppliers": ["tychem","chemdeals","providence"],
+      "pains": ["Kosher/Halal/food-grade certification required","Short shelf life on additives","Strict traceability"],
+      "title": "Surplus Chemicals for Food & Beverage | Food-Grade Acids & Hydrocolloids — ChemSurplus",
+      "metaDescription": "Source surplus food-grade chemicals — citric acid, xanthan gum, kosher glycerin, propylene glycol — with COA and certs, 30–70% below market."
+    },
+    {
+      "slug": "plastics", "name": "Plastics & Polymers", "icon": "grid",
+      "tagline": "Fillers, plasticizers, resins and additives for compounding.",
+      "categories": ["polymers-additives","resins-coatings","specialty-chemicals","intermediates"],
+      "exampleChemicals": ["Polyethylene Glycol PEG-400","Calcium Carbonate (coated)","Titanium Dioxide","Epoxy Resin","Glycerin"],
+      "suppliers": ["waste-optima","allchem","tychem","camachem","stobec"],
+      "pains": ["Resin/additive price volatility","Large-volume fillers, freight-sensitive","Spec drift on regrind/additives"],
+      "title": "Surplus Chemicals for Plastics & Polymers | Fillers, Resins & Additives — ChemSurplus",
+      "metaDescription": "Buy surplus plastics chemicals — PEG, calcium carbonate, titanium dioxide, epoxy resins — in bulk, verified and 30–70% below market."
+    },
+    {
+      "slug": "water-treatment", "name": "Water Treatment", "icon": "water",
+      "tagline": "Caustics, acids and treatment chemistry in bulk, hazmat-ready.",
+      "categories": ["acids-bases","specialty-chemicals","polymers-additives"],
+      "exampleChemicals": ["Sodium Hydroxide Pearls","Citric Acid","Surfactants","Coagulant additives"],
+      "suppliers": ["tychem","camachem","altiras","repurposed"],
+      "pains": ["High-volume commodity, freight-driven","Hazmat compliance for corrosives","Consistent recurring supply needed"],
+      "title": "Surplus Chemicals for Water Treatment | Caustics, Acids & Coagulants — ChemSurplus",
+      "metaDescription": "Source surplus water-treatment chemicals — caustic soda, acids, coagulant additives — in bulk with hazmat logistics, below market."
+    },
+    {
+      "slug": "adhesives", "name": "Adhesives & Sealants", "icon": "link",
+      "tagline": "Epoxy and acrylic resins, plasticizers and solvents for bonding.",
+      "categories": ["resins-coatings","polymers-additives","solvents"],
+      "exampleChemicals": ["Epoxy Resin (Bisphenol-A)","Acrylic Resin Emulsion","Polyethylene Glycol","Ethyl Acetate"],
+      "suppliers": ["waste-optima","stobec","allchem","ace"],
+      "pains": ["Resin chemistry shelf life","Formulation changes strand binders","Solvent compliance (VOC)"],
+      "title": "Surplus Chemicals for Adhesives & Sealants | Resins & Solvents — ChemSurplus",
+      "metaDescription": "Buy surplus adhesives chemicals — epoxy and acrylic resins, plasticizers, solvents — verified and 30–70% below market."
+    },
+    {
+      "slug": "oil-gas", "name": "Oil & Gas / Oilfield", "icon": "oil",
+      "tagline": "Rheology modifiers, oilfield additives, glycols and bulk acids.",
+      "categories": ["specialty-chemicals","solvents","acids-bases","intermediates"],
+      "exampleChemicals": ["Rheology Modifier","Oilfield additives","Methanol","Sulfuric Acid 75–85%","Glycols"],
+      "suppliers": ["altiras","ace","camachem","chemdeals"],
+      "pains": ["Bulk volumes, rail/truck logistics","Spec & blend variability","Volatile spot demand"],
+      "title": "Surplus Chemicals for Oil & Gas | Oilfield Additives & Bulk Acids — ChemSurplus",
+      "metaDescription": "Source surplus oilfield and oil & gas chemicals — rheology modifiers, additives, methanol, bulk acids — at below-spot pricing with bulk logistics."
+    }
+  ]
+}

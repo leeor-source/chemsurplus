@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "project": "ChemSurplus",
+    "domain": "https://www.chemsurplus.com",
+    "lastUpdated": "2026-05-30",
+    "source": "Live SERP research (ChemDeals, Jaxon Chemical Exchange, SUR+ International, Waste Optima, LabX, Chem-Outlet) + intent analysis",
+    "notes": "volume = est. monthly US searches; difficulty 1-100; intent = informational | commercial | transactional. Re-run build-seo.ps1 after editing landingPages."
+  },
+
+  "keywordBank": [
+    { "keyword": "surplus chemicals",                 "volume": 1300, "difficulty": 34, "intent": "commercial",    "audience": "both",   "cluster": "core",        "target": "index.html" },
+    { "keyword": "surplus chemicals marketplace",      "volume": 210,  "difficulty": 22, "intent": "commercial",    "audience": "both",   "cluster": "core",        "target": "index.html" },
+    { "keyword": "excess chemical inventory",          "volume": 480,  "difficulty": 28, "intent": "commercial",    "audience": "seller", "cluster": "sell",        "target": "categories/excess-chemical-inventory.html" },
+    { "keyword": "sell surplus chemicals",             "volume": 390,  "difficulty": 25, "intent": "transactional", "audience": "seller", "cluster": "sell",        "target": "sell.html" },
+    { "keyword": "sell excess chemical inventory",     "volume": 170,  "difficulty": 21, "intent": "transactional", "audience": "seller", "cluster": "sell",        "target": "sell.html" },
+    { "keyword": "buy surplus chemicals",              "volume": 720,  "difficulty": 30, "intent": "transactional", "audience": "buyer",  "cluster": "buy",         "target": "buy.html" },
+    { "keyword": "chemical liquidation",               "volume": 320,  "difficulty": 33, "intent": "commercial",    "audience": "seller", "cluster": "sell",        "target": "categories/chemical-liquidation.html" },
+    { "keyword": "obsolete chemicals disposal",        "volume": 260,  "difficulty": 27, "intent": "informational", "audience": "seller", "cluster": "sell",        "target": "categories/obsolete-chemicals.html" },
+    { "keyword": "off-spec chemicals for sale",        "volume": 90,   "difficulty": 18, "intent": "transactional", "audience": "buyer",  "cluster": "buy",         "target": "categories/off-spec-chemicals.html" },
+    { "keyword": "short-dated chemicals",              "volume": 70,   "difficulty": 15, "intent": "commercial",    "audience": "both",   "cluster": "buy",         "target": "categories/short-dated-chemicals.html" },
+    { "keyword": "overstock chemicals",                "volume": 110,  "difficulty": 19, "intent": "commercial",    "audience": "buyer",  "cluster": "buy",         "target": "categories/overstock-chemicals.html" },
+    { "keyword": "spot chemicals for sale",            "volume": 140,  "difficulty": 24, "intent": "transactional", "audience": "buyer",  "cluster": "buy",         "target": "categories/spot-chemicals.html" },
+    { "keyword": "surplus solvents",                   "volume": 210,  "difficulty": 23, "intent": "transactional", "audience": "buyer",  "cluster": "category",    "target": "categories/surplus-solvents.html" },
+    { "keyword": "surplus specialty chemicals",        "volume": 160,  "difficulty": 26, "intent": "transactional", "audience": "buyer",  "cluster": "category",    "target": "categories/surplus-specialty-chemicals.html" },
+    { "keyword": "surplus lab reagents",               "volume": 90,   "difficulty": 17, "intent": "transactional", "audience": "buyer",  "cluster": "category",    "target": "categories/surplus-lab-reagents.html" },
+    { "keyword": "surplus surfactants",                "volume": 70,   "difficulty": 16, "intent": "transactional", "audience": "buyer",  "cluster": "category",    "target": "categories/surplus-surfactants.html" },
+    { "keyword": "surplus resins and coatings",        "volume": 110,  "difficulty": 22, "intent": "transactional", "audience": "buyer",  "cluster": "category",    "target": "categories/surplus-resins-coatings.html" },
+    { "keyword": "bulk surplus acids and bases",       "volume": 60,   "difficulty": 20, "intent": "transactional", "audience": "buyer",  "cluster": "category",    "target": "categories/surplus-acids-bases.html" },
+    { "keyword": "how to dispose of surplus chemicals","volume": 390,  "difficulty": 24, "intent": "informational", "audience": "seller", "cluster": "guide",       "target": "categories/obsolete-chemicals.html" },
+    { "keyword": "discounted industrial chemicals",    "volume": 170,  "difficulty": 25, "intent": "transactional", "audience": "buyer",  "cluster": "buy",         "target": "buy.html" }
+  ],
+
+  "landingPages": [
+    {
+      "slug": "excess-chemical-inventory",
+      "primaryKeyword": "excess chemical inventory",
+      "secondaryKeywords": ["liquidate excess chemical inventory", "excess inventory of industrial chemicals", "reduce chemical inventory write-offs"],
+      "audience": "seller",
+      "relatedCat": "specialty-chemicals",
+      "title": "Excess Chemical Inventory — Liquidate & Recover Value | ChemSurplus",
+      "metaDescription": "Sitting on excess chemical inventory? Liquidate overstock, discontinued and slow-moving stock on ChemSurplus. Recover value, avoid disposal costs and free warehouse space.",
+      "h1": "Excess chemical inventory? Turn it back into capital.",
+      "intro": "Excess chemical inventory ties up cash, fills warehouse racking and eventually becomes a disposal liability. ChemSurplus lets manufacturers, distributors and labs liquidate overstock, discontinued SKUs and slow-moving lots to a worldwide pool of verified buyers — recovering value instead of paying to destroy it.",
+      "cta": "sell",
+      "faqs": [
+        { "q": "What counts as excess chemical inventory?", "a": "Overstock, discontinued SKUs, packaging changes, short-dated raw materials and secondary-quality goods that you no longer need but that are still usable." },
+        { "q": "How fast can I liquidate excess inventory?", "a": "List in minutes; verification is typically within 24 hours, after which qualified buyers can make buy-out or brokerage offers." }
+      ]
+    },
+    {
+      "slug": "chemical-liquidation",
+      "primaryKeyword": "chemical liquidation",
+      "secondaryKeywords": ["chemical inventory liquidation", "surplus chemical liquidation", "liquidate chemicals for cash"],
+      "audience": "seller",
+      "relatedCat": "acids-bases",
+      "title": "Chemical Liquidation — Sell Surplus Lots Without Losing Value | ChemSurplus",
+      "metaDescription": "Chemical liquidation done right: sell surplus, obsolete and off-spec lots to verified buyers worldwide. Buy-out or brokerage, hazmat logistics handled, SDS/COA supported.",
+      "h1": "Chemical liquidation that recovers value, not just clears space.",
+      "intro": "Traditional liquidation often means pennies on the dollar or paying a hazardous-waste hauler. ChemSurplus is a smarter channel: list your surplus lot, get it in front of compliant buyers, and choose between a fast buy-out or a brokerage deal that maximises recovery.",
+      "cta": "sell",
+      "faqs": [
+        { "q": "Buy-out or brokerage — which is better?", "a": "Buy-out is fastest and removes the material immediately; brokerage typically recovers more value by matching your lot to the best-fit buyer. You choose per lot." },
+        { "q": "Do you handle hazmat freight?", "a": "Yes. We match drums, totes, supersacks and bulk to compliant carriers, including hazmat where required." }
+      ]
+    },
+    {
+      "slug": "obsolete-chemicals",
+      "primaryKeyword": "obsolete chemicals disposal",
+      "secondaryKeywords": ["how to dispose of surplus chemicals", "obsolete chemical reuse", "off-spec and outdated product disposal"],
+      "audience": "seller",
+      "relatedCat": "intermediates",
+      "title": "Obsolete & Off-Spec Chemicals — Reuse Before Disposal | ChemSurplus",
+      "metaDescription": "Before paying to dispose of obsolete or off-spec chemicals, find a legitimate reuse. The EPA recommends reuse first — list on ChemSurplus to recover value and stay compliant.",
+      "h1": "Obsolete chemicals? Reuse before you pay to dispose.",
+      "intro": "Regulators including the US EPA recommend finding a legitimate reuse before disposal — chemicals that are reclaimed or reused are generally not classed as hazardous waste. Listing obsolete, outdated or off-spec stock on ChemSurplus is the most efficient way to find that reuse, cut disposal costs and recover value.",
+      "cta": "sell",
+      "faqs": [
+        { "q": "Are reused chemicals still considered waste?", "a": "Generally no — if someone can legitimately reclaim or use them, the chemicals are not a waste under hazardous-waste rules. Documentation (SDS/COA) supports the transfer." },
+        { "q": "What if my chemicals can't be reused?", "a": "If no reuse is possible they must go to a permitted hazardous-waste facility. ChemSurplus helps you exhaust the reuse option first." }
+      ]
+    },
+    {
+      "slug": "off-spec-chemicals",
+      "primaryKeyword": "off-spec chemicals for sale",
+      "secondaryKeywords": ["buy off-spec chemicals", "off-specification chemical lots", "factory seconds chemicals"],
+      "audience": "buyer",
+      "relatedCat": "resins-coatings",
+      "title": "Off-Spec Chemicals For Sale — Buy Usable Lots at a Discount | ChemSurplus",
+      "metaDescription": "Buy off-spec and factory-seconds chemicals at a steep discount. Fully usable lots with SDS/COA, ideal for applications that don't require prime specification.",
+      "h1": "Off-spec chemicals for sale — prime performance, off-spec price.",
+      "intro": "Off-spec doesn't mean unusable. Many off-specification lots miss a single prime parameter yet perform perfectly in less demanding applications — at 30–70% below market. Every lot on ChemSurplus carries documentation so you know exactly what you're buying.",
+      "cta": "buy",
+      "faqs": [
+        { "q": "Is off-spec material safe to use?", "a": "It's the same chemistry, off a prime spec on one parameter. Review the COA and SDS against your application requirements before buying." },
+        { "q": "How much cheaper is off-spec?", "a": "Typically 30–70% below prime market price depending on the deviation, quantity and shelf life." }
+      ]
+    },
+    {
+      "slug": "short-dated-chemicals",
+      "primaryKeyword": "short-dated chemicals",
+      "secondaryKeywords": ["short dated raw materials", "near expiry chemicals for sale", "short shelf life chemicals discount"],
+      "audience": "both",
+      "relatedCat": "surfactants",
+      "title": "Short-Dated Chemicals — Buy & Sell Near-Expiry Lots | ChemSurplus",
+      "metaDescription": "Short-dated chemicals lose value every month they sit. Sellers recover value before expiry; buyers grab usable near-dated lots cheap. SDS/COA on every listing.",
+      "h1": "Short-dated chemicals — move them before the clock runs out.",
+      "intro": "Short-dated and near-expiry raw materials are a race against the calendar. ChemSurplus connects sellers who need to move them with buyers whose throughput can consume them well within shelf life — turning a looming write-off into a fast, documented deal.",
+      "cta": "buy",
+      "faqs": [
+        { "q": "Can I still use short-dated chemicals?", "a": "Yes, provided you consume them within the stated best-by window. Each listing shows the shelf-life date." },
+        { "q": "Why are short-dated lots cheaper?", "a": "The shorter remaining shelf life narrows the buyer pool, so sellers price aggressively to move the lot in time." }
+      ]
+    },
+    {
+      "slug": "overstock-chemicals",
+      "primaryKeyword": "overstock chemicals",
+      "secondaryKeywords": ["overstock chemical inventory", "surplus overstock chemicals", "buy overstock chemicals wholesale"],
+      "audience": "buyer",
+      "relatedCat": "solvents",
+      "title": "Overstock Chemicals — Buy Surplus Overstock Lots Below Market | ChemSurplus",
+      "metaDescription": "Overstock chemicals are prime-quality lots a company simply over-ordered. Buy sealed overstock solvents, surfactants and specialty chemicals well below wholesale.",
+      "h1": "Overstock chemicals — prime quality, surplus price.",
+      "intro": "Overstock is the easiest surplus to buy with confidence: it's prime material a company over-ordered, usually unopened and fully documented. ChemSurplus aggregates overstock lots across solvents, surfactants, resins and specialty chemicals so you can source quality below wholesale.",
+      "cta": "buy",
+      "faqs": [
+        { "q": "Is overstock the same as prime material?", "a": "Yes — overstock is prime-spec material that was simply over-ordered, typically sealed and unopened." },
+        { "q": "What quantities are available?", "a": "From a few drums to full tanker loads, depending on the lot. Filter by packaging in the marketplace." }
+      ]
+    },
+    {
+      "slug": "spot-chemicals",
+      "primaryKeyword": "spot chemicals for sale",
+      "secondaryKeywords": ["spot chemical lots", "surplus spot chemicals", "spot market chemicals below index"],
+      "audience": "buyer",
+      "relatedCat": "polymers-additives",
+      "title": "Spot Chemicals For Sale — Below-Index Surplus Lots | ChemSurplus",
+      "metaDescription": "Source spot chemical lots verified and significantly below spot-market indices. Solvents, additives, resins and more — documented and ready to ship.",
+      "h1": "Spot chemicals for sale — verified and below index.",
+      "intro": "When you need volume now, spot lots on ChemSurplus are secured directly from the source, verified, and priced significantly below current spot-market indices. Filter by category and region, review the documentation, and request a quote in minutes.",
+      "cta": "buy",
+      "faqs": [
+        { "q": "How far below index are spot lots?", "a": "Specialty lots commonly run 30–70% below current wholesale, depending on quantity and shelf life." },
+        { "q": "Can I get recurring spot supply?", "a": "Set a sourcing alert and we'll notify you whenever matching spot lots are listed." }
+      ]
+    },
+    {
+      "slug": "surplus-solvents",
+      "primaryKeyword": "surplus solvents",
+      "secondaryKeywords": ["buy surplus solvents", "surplus IPA acetone toluene", "discount industrial solvents"],
+      "audience": "buyer",
+      "relatedCat": "solvents",
+      "title": "Surplus Solvents For Sale — IPA, Acetone, Toluene & More | ChemSurplus",
+      "metaDescription": "Buy surplus solvents — isopropyl alcohol, acetone, toluene, ethyl acetate and more — in drums, totes and bulk at 30–70% below market. SDS/COA on every lot.",
+      "h1": "Surplus solvents — drums to tankers, below market.",
+      "intro": "Solvents are among the most-traded surplus chemicals: high-volume, shelf-stable and easy to redeploy. ChemSurplus carries surplus IPA, acetone, toluene, ethyl acetate and more in drums, IBC totes, pails and bulk tankers — all documented and below wholesale.",
+      "cta": "buy",
+      "faqs": [
+        { "q": "Which surplus solvents are most common?", "a": "Isopropyl alcohol (IPA), acetone, toluene, ethyl acetate, methanol and MEK are frequently listed." },
+        { "q": "Do solvents have a shelf-life concern?", "a": "Most common solvents are shelf-stable; listings still show any best-by date for full transparency." }
+      ]
+    },
+    {
+      "slug": "surplus-specialty-chemicals",
+      "primaryKeyword": "surplus specialty chemicals",
+      "secondaryKeywords": ["buy surplus specialty chemicals", "surplus pigments additives", "specialty chemical surplus below market"],
+      "audience": "buyer",
+      "relatedCat": "specialty-chemicals",
+      "title": "Surplus Specialty Chemicals — Pigments, Additives & More | ChemSurplus",
+      "metaDescription": "Buy surplus specialty chemicals — pigments, food-grade additives, USP-grade powders and more — verified and 30–70% below market, with full documentation.",
+      "h1": "Surplus specialty chemicals — high value, surplus price.",
+      "intro": "Specialty chemicals carry the highest value per kilo, so surplus lots offer the biggest savings. ChemSurplus lists surplus pigments, food-grade additives, USP-grade powders and performance chemicals from manufacturers and distributors clearing excess stock.",
+      "cta": "buy",
+      "faqs": [
+        { "q": "Are pharma/food-grade surplus lots available?", "a": "Yes — USP, food-grade and cosmetic-grade lots appear regularly, each with COA and relevant certifications." },
+        { "q": "How are specialty lots verified?", "a": "Each is published with SDS plus COA/TDS, and sellers are vetted before listing goes live." }
+      ]
+    },
+    {
+      "slug": "surplus-lab-reagents",
+      "primaryKeyword": "surplus lab reagents",
+      "secondaryKeywords": ["buy surplus lab chemicals", "ACS reagent surplus", "discount laboratory reagents"],
+      "audience": "buyer",
+      "relatedCat": "lab-reagents",
+      "title": "Surplus Lab Reagents — ACS & Reagent-Grade at a Discount | ChemSurplus",
+      "metaDescription": "Buy surplus laboratory reagents — ACS and reagent-grade chemicals in bottles and small packs — from labs clearing excess stock. Documented and discounted.",
+      "h1": "Surplus lab reagents — research-grade, surplus price.",
+      "intro": "Contract labs and R&D groups regularly clear excess reagents in small, high-purity packs. ChemSurplus aggregates these surplus lab reagents — ACS and reagent-grade — so other labs can source quality chemistry at a fraction of catalogue price.",
+      "cta": "buy",
+      "faqs": [
+        { "q": "What grades of reagent are listed?", "a": "Commonly ACS reagent and laboratory grade, each with a COA stating purity." },
+        { "q": "Are small quantities available?", "a": "Yes — reagents are often listed in bottles and small packs, ideal for labs that don't need bulk." }
+      ]
+    },
+    {
+      "slug": "surplus-surfactants",
+      "primaryKeyword": "surplus surfactants",
+      "secondaryKeywords": ["buy surplus surfactants", "surplus SLES CAPB", "discount surfactants for formulation"],
+      "audience": "buyer",
+      "relatedCat": "surfactants",
+      "title": "Surplus Surfactants — SLES, CAPB & More Below Market | ChemSurplus",
+      "metaDescription": "Buy surplus surfactants — SLES, cocamidopropyl betaine and more — for home, personal-care and industrial cleaning formulation, at 30–70% below market.",
+      "h1": "Surplus surfactants — formulate for less.",
+      "intro": "Surfactants are formulation workhorses for cleaning and personal-care products. ChemSurplus carries surplus SLES, cocamidopropyl betaine and other anionic and amphoteric surfactants in drums and totes — documented and well below market.",
+      "cta": "buy",
+      "faqs": [
+        { "q": "Which surfactants are commonly surplus?", "a": "SLES (sodium lauryl ether sulfate) and CAPB (cocamidopropyl betaine) are among the most frequently listed." },
+        { "q": "Are cosmetic-grade lots available?", "a": "Yes — cosmetic-grade surfactant lots with COA are listed regularly." }
+      ]
+    },
+    {
+      "slug": "surplus-resins-coatings",
+      "primaryKeyword": "surplus resins and coatings",
+      "secondaryKeywords": ["buy surplus resins", "surplus acrylic epoxy resin", "discount coatings binders emulsions"],
+      "audience": "buyer",
+      "relatedCat": "resins-coatings",
+      "title": "Surplus Resins & Coatings — Acrylic, Epoxy & Emulsions | ChemSurplus",
+      "metaDescription": "Buy surplus resins and coatings — acrylic emulsions, epoxy resins, latex binders — from manufacturers clearing excess. 30–70% below market with documentation.",
+      "h1": "Surplus resins & coatings — binders, emulsions & resins.",
+      "intro": "Coatings manufacturers routinely hold excess acrylic emulsions, epoxy resins and latex binders after a formulation or run change. ChemSurplus lists these surplus resins and coatings so other formulators can source quality binders well below current wholesale.",
+      "cta": "buy",
+      "faqs": [
+        { "q": "What resin types are listed?", "a": "Acrylic resin emulsions, bisphenol-A epoxy resins, latex emulsions and coatings binders are common." },
+        { "q": "How do I check compatibility?", "a": "Each lot includes a TDS and/or SDS so you can verify properties against your formulation." }
+      ]
+    },
+    {
+      "slug": "surplus-acids-bases",
+      "primaryKeyword": "bulk surplus acids and bases",
+      "secondaryKeywords": ["surplus caustic soda", "surplus citric acid", "buy bulk surplus acids bases"],
+      "audience": "buyer",
+      "relatedCat": "acids-bases",
+      "title": "Surplus Acids & Bases — Caustic Soda, Citric Acid & More | ChemSurplus",
+      "metaDescription": "Buy surplus acids and bases in bulk — caustic soda, citric acid and more — in bags, supersacks and totes at below-market prices with full documentation.",
+      "h1": "Surplus acids & bases — bulk commodity chemistry, below market.",
+      "intro": "High-volume acids and bases like caustic soda and citric acid move constantly on the surplus market when production schedules shift. ChemSurplus lists these in bags, supersacks and totes so buyers can secure bulk commodity chemistry below market with hazmat-ready logistics.",
+      "cta": "buy",
+      "faqs": [
+        { "q": "How are corrosive lots shipped?", "a": "In compliant packaging with hazmat-qualified carriers; the listing states packaging and region." },
+        { "q": "What quantities are typical?", "a": "From pallets of bagged material to full supersack and tote lots." }
+      ]
+    }
+  ]
+}

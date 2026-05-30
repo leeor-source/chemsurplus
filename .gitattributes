@@ -1,0 +1,12 @@
+# Normalize line endings: store LF in the repo, check out LF on Linux/CI hosts.
+* text=auto eol=lf
+
+# PowerShell authoring scripts stay CRLF on Windows checkouts.
+*.ps1 text eol=crlf
+
+# Treat these as text with LF.
+*.svg text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf

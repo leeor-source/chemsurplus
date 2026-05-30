@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy Surplus Chemicals | Discounted Solvents, Reagents & Specialty Chemicals — ChemSurplus</title>
+<meta name="description" content="Browse and buy surplus, excess and spot chemicals 30–70% below market. Filter verified lots by category, CAS number, packaging and region — SDS & COA on every listing.">
+<link rel="canonical" href="https://www.chemsurplus.com/buy.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Buy Surplus Chemicals — ChemSurplus Marketplace">
+<meta property="og:description" content="Source verified surplus chemicals 30–70% below market, with full SDS/COA documentation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.chemsurplus.com/buy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"CollectionPage","name":"Buy Surplus Chemicals",
+  "description":"Marketplace of surplus, excess and spot chemicals available below market price.",
+  "url":"https://www.chemsurplus.com/buy.html",
+  "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.chemsurplus.com/"},
+    {"@type":"ListItem","position":2,"name":"Buy surplus chemicals","item":"https://www.chemsurplus.com/buy.html"}]}}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#0e6b5c"/><path d="M16 9h8M17 9v7l-6 11a2 2 0 0 0 1.7 3h14.6a2 2 0 0 0 1.7-3l-6-11V9" stroke="#16c79a" stroke-width="2" stroke-linejoin="round"/></svg>
+      ChemSurplus</a>
+    <ul class="nav__links">
+      <li><a href="buy.html">Buy chemicals</a></li><li><a href="sell.html">Sell surplus</a></li>
+      <li><a href="how-it-works.html">How it works</a></li><li><a href="index.html#industries">Industries</a></li>
+    </ul>
+    <div class="nav__cta">
+      <a href="rfq.html" class="btn btn--ghost">RFQ list <span class="rfq-badge hidden" data-rfq-count>0</span></a>
+      <a href="sell.html" class="btn btn--primary">List surplus</a>
+      <button class="nav__toggle" data-nav-toggle aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" stroke="#0a1f1b" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- page intro -->
+<section class="section--tight" style="padding-bottom:1.4rem">
+  <div class="container">
+    <p class="eyebrow">Buyer marketplace</p>
+    <h1>Buy surplus chemicals — personalized to your industry</h1>
+    <p class="lead">One clean interface across many verified brokers. Pick your industry and you'll only see surplus that fits — each lot attributed to the supplier who holds it, with SDS/COA for full traceability.</p>
+  </div>
+</section>
+
+<!-- marketplace -->
+<section style="padding-bottom:80px">
+  <div class="container">
+    <div class="market">
+      <!-- filters -->
+      <aside class="filters">
+        <div class="flex between items-center"><h4 style="margin:0">Filters</h4><button class="btn btn--ghost" data-clear style="padding:.3rem .7rem;font-size:.78rem">Clear</button></div>
+        <h4>Category</h4><div id="fltCat"></div>
+        <h4>Condition</h4><div id="fltCond"></div>
+        <h4>Packaging</h4><div id="fltPkg"></div>
+      </aside>
+
+      <!-- results -->
+      <div>
+        <div id="industryBanner" class="hidden"></div>
+        <div class="market__toolbar">
+          <div class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input id="searchInput" type="search" placeholder="Search by name, CAS number, grade…" aria-label="Search surplus chemicals">
+          </div>
+          <div class="flex items-center gap">
+            <select id="industrySwitch" class="select" aria-label="Industry"></select>
+            <span class="muted" style="font-size:.9rem"><strong id="resultCount">0</strong> lots</span>
+            <select id="sortBy" class="select" aria-label="Sort">
+              <option value="discount">Biggest discount</option>
+              <option value="price-low">Price: low → high</option>
+              <option value="price-high">Price: high → low</option>
+            </select>
+          </div>
+        </div>
+        <div class="listings" id="listingGrid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO content + category links -->
+<section class="section--tight" id="categories" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="container prose">
+    <h2>Sourcing surplus &amp; excess chemicals</h2>
+    <p class="muted">Buying surplus chemicals is one of the fastest ways for formulators, manufacturers and labs to cut input costs. Lots on ChemSurplus are overstock, discontinued SKUs, off-spec or short-dated materials — fully usable chemistry that sells well below spot-market indices. Because every lot carries documentation, you get the same traceability you'd expect from a prime supplier, at a fraction of the price.</p>
+    <h3>Browse by category</h3>
+    <div class="internal-links" id="seoCats"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border:0;margin:0;padding:0">
+      <span>© 2026 ChemSurplus — buy &amp; sell surplus chemicals.</span>
+      <span><a href="index.html" style="color:#9fb3ad">Home</a> · <a href="sell.html" style="color:#9fb3ad">Sell surplus</a> · <a href="how-it-works.html" style="color:#9fb3ad">How it works</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/suppliers.js"></script>
+<script src="assets/js/industries.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/rfq.js"></script>
+<script src="assets/js/marketplace.js"></script>
+<script>
+  document.getElementById("seoCats").innerHTML = CATEGORIES.map(c =>
+    `<a class="pill" href="buy.html?cat=${c.slug}">${c.name}</a>`).join("");
+</script>
+</body>
+</html>

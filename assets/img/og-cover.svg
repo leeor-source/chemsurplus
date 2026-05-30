@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1f1b"/><stop offset="1" stop-color="#0a4a40"/>
+    </linearGradient>
+    <linearGradient id="drum" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16c79a"/><stop offset="1" stop-color="#0e6b5c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- molecular accent -->
+  <g stroke="#16c79a" stroke-width="3" opacity=".4">
+    <line x1="820" y1="120" x2="930" y2="95"/><line x1="930" y1="95" x2="1030" y2="150"/>
+    <line x1="930" y1="95" x2="915" y2="200"/><line x1="1030" y1="150" x2="1060" y2="250"/>
+  </g>
+  <g fill="#16c79a" opacity=".85">
+    <circle cx="820" cy="120" r="10"/><circle cx="930" cy="95" r="13"/><circle cx="1030" cy="150" r="11"/>
+    <circle cx="915" cy="200" r="9"/><circle cx="1060" cy="250" r="10"/>
+  </g>
+  <!-- drums -->
+  <g transform="translate(840,300)">
+    <rect x="0" y="0" width="120" height="200" rx="16" fill="url(#drum)"/>
+    <rect x="0" y="40" width="120" height="8" fill="#fff" opacity=".3"/>
+    <rect x="0" y="152" width="120" height="8" fill="#fff" opacity=".3"/>
+  </g>
+  <g transform="translate(980,350)">
+    <rect x="0" y="0" width="140" height="170" rx="12" fill="#ffffff" stroke="#16c79a" stroke-width="3"/>
+    <path d="M0 43h140M0 86h140M0 129h140M47 0v170M94 0v170" stroke="#cfe6df" stroke-width="2.5"/>
+  </g>
+  <!-- discount tag -->
+  <g transform="translate(1000,250)">
+    <rect width="120" height="56" rx="14" fill="#f59e0b"/>
+    <text x="60" y="38" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="26" fill="#3b2a00" text-anchor="middle">-60%</text>
+  </g>
+  <!-- logo + text -->
+  <g transform="translate(90,90)">
+    <rect width="64" height="64" rx="16" fill="#0e6b5c"/>
+    <path d="M25 15h14M27 15v11l-10 18a3 3 0 0 0 2.6 4.6h22.8A3 3 0 0 0 49 44L39 26V15" stroke="#16c79a" stroke-width="3.2" stroke-linejoin="round" fill="none"/>
+    <text x="84" y="44" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="34" fill="#ffffff">ChemSurplus</text>
+  </g>
+  <text x="90" y="280" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="68" fill="#ffffff">Surplus chemicals,</text>
+  <text x="90" y="356" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="68" fill="#16c79a">personalized to your industry.</text>
+  <text x="90" y="430" font-family="Inter, sans-serif" font-size="30" fill="#c8d6d1">Buy &amp; sell verified surplus 30&#8211;70% below market.</text>
+  <g transform="translate(90,476)" font-family="Inter, sans-serif" font-size="24" fill="#9fb3ad">
+    <text x="0" y="20">SDS &amp; COA on every lot</text>
+    <text x="300" y="20">&#183;  Verified brokers</text>
+    <text x="540" y="20">&#183;  9 industries</text>
+  </g>
+</svg>
