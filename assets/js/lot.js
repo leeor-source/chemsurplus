@@ -47,7 +47,7 @@
       <div class="lot">
         <!-- media -->
         <div class="lot__media">
-          <div class="lot__art">${icon(iconKey)}</div>
+          <div class="lot__art">${typeof productArt === "function" ? productArt(l) : icon(iconKey)}</div>
           ${off > 0 ? `<span class="listing__discount">−${off}%</span>` : ""}
           <div class="lot__docs">${docStrip}</div>
         </div>

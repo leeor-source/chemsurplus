@@ -95,7 +95,7 @@
     const condClass = /Short-dated|Off-spec/.test(l.condition) ? "tag--amber" : "tag--green";
     const inRfq = (typeof RFQ !== "undefined") && RFQ.has(l.id);
     return `<article class="listing">
-      <a class="listing__media" href="lot.html?id=${l.id}">${icon((CATEGORIES.find(c=>c.slug===l.cat)||{}).icon||"flask")}
+      <a class="listing__media" href="lot.html?id=${l.id}">${typeof productArt==="function"?productArt(l):icon((CATEGORIES.find(c=>c.slug===l.cat)||{}).icon||"flask")}
         ${off>0?`<span class="listing__discount">−${off}%</span>`:""}</a>
       <div class="listing__body">
         <span class="listing__cat">${catName(l.cat)}</span>
