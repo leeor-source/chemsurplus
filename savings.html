@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surplus Savings Calculator | Market Price vs Surplus Saving — ChemSurplus</title>
+<meta name="description" content="Estimate your saving on surplus chemicals vs the market wholesale price - by chemical, quantity and condition. Sellers: see recovered value plus avoided disposal cost. Indicative, band-based, no exact prices.">
+<link rel="canonical" href="https://www.chemsurplus.com/savings.html">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Surplus Savings Calculator — ChemSurplus">
+<meta property="og:description" content="Market wholesale price vs surplus saving - estimate your saving by chemical and quantity.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.chemsurplus.com/assets/img/og-cover.svg">
+<meta name="theme-color" content="#0e6b5c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#0e6b5c"/><path d="M16 9h8M17 9v7l-6 11a2 2 0 0 0 1.7 3h14.6a2 2 0 0 0 1.7-3l-6-11V9" stroke="#16c79a" stroke-width="2" stroke-linejoin="round"/></svg>
+      ChemSurplus</a>
+    <ul class="nav__links">
+      <li><a href="buy.html">Buy chemicals</a></li><li><a href="sell.html">Sell surplus</a></li>
+      <li><a href="market.html">Market</a></li><li><a href="solutions.html">Solutions</a></li>
+    </ul>
+    <div class="nav__cta">
+      <a href="rfq.html" class="btn btn--ghost">RFQ list <span class="rfq-badge hidden" data-rfq-count>0</span></a>
+      <a href="buy.html" class="btn btn--primary">Browse marketplace</a>
+      <button class="nav__toggle" data-nav-toggle aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" stroke="#0a1f1b" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<section class="section--tight">
+  <div class="container" style="max-width:900px">
+    <p class="eyebrow">Savings estimator</p>
+    <h1>What's your saving vs the market?</h1>
+    <p class="lead">Surplus chemicals sell <strong>30–70% below market</strong>. Estimate your saving against the wholesale reference price — or against what you normally pay. We show a <strong>band</strong>, not a fixed price; exact pricing comes per-RFQ.</p>
+
+    <div class="sv-tabs mt-3">
+      <button class="sv-tab is-active" data-sv-tab="buyer">I'm buying</button>
+      <button class="sv-tab" data-sv-tab="seller">I'm selling</button>
+    </div>
+
+    <!-- BUYER -->
+    <div id="svBuyer" class="grid grid--2 mt-3" style="align-items:start">
+      <div class="form-wrap">
+        <div class="field"><label>Chemical<select id="svChem"></select></label></div>
+        <div class="field"><label>Quantity (kg)<input id="svQty" type="number" value="5000" min="0"></label></div>
+        <div class="field"><label>Condition<select id="svTier">
+          <option value="overstock">Overstock (meets prime spec)</option>
+          <option value="off-spec" selected>Off-spec / wide-spec</option>
+          <option value="distressed">Distressed / forced liquidation</option>
+        </select></label></div>
+        <div class="field"><label>What you normally pay ($/kg) <span class="hint">optional — keeps it private to you</span><input id="svBaseline" type="number" step="0.01" min="0" placeholder="use market reference"></label></div>
+      </div>
+      <div>
+        <div class="calc-out">
+          <small id="svRefNote">market reference</small>
+          <div class="flex between mt-1" style="font-size:.95rem"><span>Market wholesale cost</span><strong id="svMarket">—</strong></div>
+          <div class="flex between" style="font-size:.95rem"><span>Surplus saving</span><strong id="svPct">—</strong></div>
+          <hr style="border:0;border-top:1px solid rgba(255,255,255,.2);margin:.7rem 0">
+          <small>You could save</small>
+          <div class="big" id="svSave">—</div>
+          <div class="flex between mt-1" style="font-size:.9rem"><span>Est. surplus cost</span><strong id="svCost">—</strong></div>
+        </div>
+        <div class="flex gap wrap mt-2"><a href="buy.html" class="btn btn--accent btn--block btn--lg">Find these lots in the marketplace</a></div>
+      </div>
+    </div>
+
+    <!-- SELLER -->
+    <div id="svSeller" class="grid grid--2 mt-3 hidden" style="align-items:start">
+      <div class="form-wrap">
+        <div class="field"><label>Chemical<select id="seChem"></select></label></div>
+        <div class="field"><label>Quantity to move (kg)<input id="seQty" type="number" value="10000" min="0"></label></div>
+        <p class="muted" style="font-size:.85rem">Selling surplus recovers value <em>and</em> avoids the cost of disposing of it — so your benefit is both.</p>
+      </div>
+      <div>
+        <div class="calc-out">
+          <small>Estimated total benefit vs disposal</small>
+          <div class="big" id="seTotal">—</div>
+          <div class="flex between mt-2" style="font-size:.9rem"><span>Value recovered</span><strong id="seRecover">—</strong></div>
+          <div class="flex between" style="font-size:.9rem"><span>Disposal avoided</span><strong id="seDisposal">—</strong></div>
+        </div>
+        <div class="flex gap wrap mt-2"><a href="sell.html" class="btn btn--primary btn--block btn--lg">List your surplus</a></div>
+      </div>
+    </div>
+
+    <p class="muted mt-3" style="font-size:.8rem">Indicative only. Market references are 2025 wholesale benchmarks (ICIS / ChemAnalyst / Intratec / S&amp;P); surplus bands follow industry-observed 30–70% below market; disposal costs are typical hazardous-waste ranges. Actual pricing is quoted per requirement via RFQ.</p>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom" style="border:0;margin:0;padding:0">
+  <span>&copy; 2026 ChemSurplus.</span>
+  <span><a href="index.html" style="color:#9fb3ad">Home</a> &middot; <a href="market.html" style="color:#9fb3ad">Market</a> &middot; <a href="buy.html" style="color:#9fb3ad">Buy</a></span>
+</div></div></footer>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/market.js"></script>
+<script src="assets/js/rfq.js"></script>
+<script src="assets/js/savings.js"></script>
+</body>
+</html>

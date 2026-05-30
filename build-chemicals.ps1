@@ -241,7 +241,8 @@ Write-Sitemap "sitemap-core.xml" @(
   @{loc="$domain/";f="daily";p="1.0"}, @{loc="$domain/buy.html";f="daily";p="0.9"},
   @{loc="$domain/sell.html";f="weekly";p="0.9"}, @{loc="$domain/how-it-works.html";f="monthly";p="0.6"},
   @{loc="$domain/ecosystem.html";f="monthly";p="0.7"}, @{loc="$domain/chemicals.html";f="weekly";p="0.8"},
-  @{loc="$domain/aggregation.html";f="monthly";p="0.6"}
+  @{loc="$domain/aggregation.html";f="monthly";p="0.6"}, @{loc="$domain/savings.html";f="monthly";p="0.7"},
+  @{loc="$domain/market.html";f="monthly";p="0.7"}, @{loc="$domain/solutions.html";f="monthly";p="0.7"}
 )
 Write-Sitemap "sitemap-industries.xml" ($inds | ForEach-Object { @{loc="$domain/industries/$($_.slug).html";f="weekly";p="0.85"} })
 Write-Sitemap "sitemap-categories.xml" ($cats | ForEach-Object { @{loc="$domain/categories/$($_.slug).html";f="weekly";p="0.8"} })

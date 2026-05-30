@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Opportunity: Where Surplus Chemicals Are Cheapest vs Priciest | ChemSurplus</title>
+<meta name="description" content="Where in the world is the biggest surplus-chemical opportunity? Source regions (US Gulf Coast, Middle East, China) vs premium buyer regions (Europe, Asia) and the chemicals with the widest wholesale price spreads.">
+<link rel="canonical" href="https://www.chemsurplus.com/market.html">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Surplus Chemical Market Opportunity — ChemSurplus">
+<meta property="og:description" content="Where surplus is cheapest to source vs where it sells highest — the global arbitrage map.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.chemsurplus.com/assets/img/og-cover.svg">
+<meta name="theme-color" content="#0e6b5c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#0e6b5c"/><path d="M16 9h8M17 9v7l-6 11a2 2 0 0 0 1.7 3h14.6a2 2 0 0 0 1.7-3l-6-11V9" stroke="#16c79a" stroke-width="2" stroke-linejoin="round"/></svg>
+      ChemSurplus</a>
+    <ul class="nav__links">
+      <li><a href="buy.html">Buy chemicals</a></li><li><a href="sell.html">Sell surplus</a></li>
+      <li><a href="savings.html">Savings</a></li><li><a href="solutions.html">Solutions</a></li>
+    </ul>
+    <div class="nav__cta">
+      <a href="rfq.html" class="btn btn--ghost">RFQ list <span class="rfq-badge hidden" data-rfq-count>0</span></a>
+      <a href="buy.html" class="btn btn--primary">Browse marketplace</a>
+      <button class="nav__toggle" data-nav-toggle aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" stroke="#0a1f1b" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<section class="section--tight">
+  <div class="container">
+    <p class="eyebrow">Market opportunity</p>
+    <h1>Where in the world the surplus opportunity is biggest</h1>
+    <p class="lead">Commodity chemicals are structurally cheap in a few <strong>source regions</strong> and structurally expensive in a few <strong>buyer regions</strong>. That gap — often 30–130% — is the surplus opportunity. Here's the global map and the chemicals with the widest spreads.</p>
+  </div>
+</section>
+
+<!-- arbitrage map -->
+<section class="section--tight" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="container">
+    <div class="center"><h2>The arbitrage map</h2><p class="lead center">Source where it's cheap · sell where it's dear.</p></div>
+    <div class="region-cols mt-4">
+      <div><p class="region-card__head muted" style="font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.8rem;color:var(--teal)">Cheap source regions</p><div id="srcRegions"></div></div>
+      <div class="region-cols__arrow">&rarr;</div>
+      <div><p class="region-card__head muted" style="font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.8rem;color:var(--amber)">Premium buyer regions</p><div id="buyRegions"></div></div>
+    </div>
+    <p class="center muted mt-2" style="font-size:.9rem">Easiest origination: <strong>US Gulf Coast distressed inventory</strong>. Fattest single lane: <strong>Asia-priced material → European buyers</strong>.</p>
+  </div>
+</section>
+
+<!-- biggest spreads -->
+<section class="section--tight">
+  <div class="container">
+    <div class="center"><h2>Chemicals with the widest price spreads</h2><p class="lead center">Indicative 2025 wholesale, USD/kg. The bigger the spread, the bigger the surplus savings story.</p></div>
+    <div style="overflow:auto" class="mt-3">
+      <table class="table" id="spreadTable">
+        <thead><tr><th>Chemical</th><th>Asia</th><th>US</th><th>Europe</th><th>Spread</th></tr></thead>
+        <tbody id="spreadBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- takeaway -->
+<section class="section--tight" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="container prose">
+    <h2>The 2025 wildcard</h2>
+    <p class="muted">US ethane export curbs to China (China was ~47% of US ethane exports in 2024) are stranding feedstock onshore and idling some Chinese ethane-only crackers — <strong>increasing US domestic surplus and volatility</strong>. That means more distressed, must-move material originating on the US Gulf Coast: good supply for a surplus platform, and a widening gap for European and Asian buyers to capture.</p>
+    <p class="muted" style="font-size:.82rem">Sources: S&amp;P Global Chemical Trends, McKinsey, Cefic, US EIA, ICIS, ChemAnalyst, Intratec. Figures indicative; refresh quarterly.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="cta-band flex between items-center wrap gap">
+      <div style="max-width:38ch"><h2>Turn the spread into your saving.</h2><p>Estimate it on a specific chemical and quantity.</p></div>
+      <div class="flex gap wrap"><a href="savings.html" class="btn btn--accent btn--lg">Open the savings calculator</a><a href="buy.html" class="btn btn--light btn--lg">Browse surplus</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom" style="border:0;margin:0;padding:0">
+  <span>&copy; 2026 ChemSurplus — surplus chemical market intelligence.</span>
+  <span><a href="index.html" style="color:#9fb3ad">Home</a> &middot; <a href="savings.html" style="color:#9fb3ad">Savings</a> &middot; <a href="buy.html" style="color:#9fb3ad">Buy</a></span>
+</div></div></footer>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/market.js"></script>
+<script src="assets/js/rfq.js"></script>
+<script>
+  function regionCard(r, cls) {
+    return '<div class="region-card ' + cls + '"><div class="role" style="color:' + (cls === "is-source" ? "var(--teal)" : "#b07a08") + '">' + r.role + '</div>'
+      + '<h4>' + r.name + '</h4><p class="muted" style="margin:0;font-size:.86rem">' + r.why + '</p></div>';
+  }
+  document.getElementById("srcRegions").innerHTML = CS_MARKET.regions.sources.map(function (r) { return regionCard(r, "is-source"); }).join("");
+  document.getElementById("buyRegions").innerHTML = CS_MARKET.regions.buyers.map(function (r) { return regionCard(r, "is-buyer"); }).join("");
+  document.getElementById("spreadBody").innerHTML = CS_MARKET.spreads.map(function (s) {
+    var px = function (v) { return v == null ? '<span class="muted">—</span>' : "$" + v.toFixed(2); };
+    return '<tr><td><strong>' + s.name + '</strong></td><td>' + px(s.asia) + '</td><td>' + px(s.us) + '</td><td>' + px(s.eu) + '</td>'
+      + '<td><span class="tag tag--amber">' + s.premium + '</span></td></tr>';
+  }).join("");
+</script>
+</body>
+</html>

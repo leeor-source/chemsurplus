@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solutions by Company Type | Built for Manufacturers, Distributors, Formulators, Labs & Brokers — ChemSurplus</title>
+<meta name="description" content="What ChemSurplus builds for each company type — manufacturers, distributors, formulators/blenders, contract labs and brokers: what matters to you, where today's options fall short, and the tool that fixes it.">
+<link rel="canonical" href="https://www.chemsurplus.com/solutions.html">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="ChemSurplus Solutions by Company Type">
+<meta property="og:description" content="Built for manufacturers, distributors, formulators, labs and brokers — the right tool for each.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.chemsurplus.com/assets/img/og-cover.svg">
+<meta name="theme-color" content="#0e6b5c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#0e6b5c"/><path d="M16 9h8M17 9v7l-6 11a2 2 0 0 0 1.7 3h14.6a2 2 0 0 0 1.7-3l-6-11V9" stroke="#16c79a" stroke-width="2" stroke-linejoin="round"/></svg>
+      ChemSurplus</a>
+    <ul class="nav__links">
+      <li><a href="buy.html">Buy chemicals</a></li><li><a href="sell.html">Sell surplus</a></li>
+      <li><a href="market.html">Market</a></li><li><a href="savings.html">Savings</a></li>
+    </ul>
+    <div class="nav__cta">
+      <a href="rfq.html" class="btn btn--ghost">RFQ list <span class="rfq-badge hidden" data-rfq-count>0</span></a>
+      <a href="buy.html" class="btn btn--primary">Browse marketplace</a>
+      <button class="nav__toggle" data-nav-toggle aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" stroke="#0a1f1b" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<section class="section--tight">
+  <div class="container">
+    <p class="eyebrow">Solutions by company type</p>
+    <h1>Built for how your company actually buys and sells</h1>
+    <p class="lead">A manufacturer's worry isn't a lab's worry. Below: for each company type — what matters most, where today's options fall short, and the specific tool we build for you. <span class="tag tag--green">Live</span> ships today; <span class="tag tag--amber">Roadmap</span> is what's next.</p>
+  </div>
+</section>
+
+<section class="section--tight"><div class="container"><div class="grid" id="solGrid" style="gap:22px"></div></div></section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="cta-band flex between items-center wrap gap">
+      <div style="max-width:40ch"><h2>See it for your industry.</h2><p>Pick your vertical and the marketplace personalizes — documented, below market, pricing on request.</p></div>
+      <div class="flex gap wrap"><a href="index.html#industries" class="btn btn--accent btn--lg">Choose your industry</a><a href="savings.html" class="btn btn--light btn--lg">Estimate your saving</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom" style="border:0;margin:0;padding:0">
+  <span>&copy; 2026 ChemSurplus.</span>
+  <span><a href="index.html" style="color:#9fb3ad">Home</a> &middot; <a href="market.html" style="color:#9fb3ad">Market</a> &middot; <a href="savings.html" style="color:#9fb3ad">Savings</a></span>
+</div></div></footer>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/rfq.js"></script>
+<script>
+  var SOL = [
+    { icon:"beaker", type:"Chemical manufacturers & producers", persona:"You make it",
+      matters:"Move excess, off-spec and aging virgin stock <strong>without cannibalising your list price or contract customers</strong>, recover trapped working capital, and protect your name on the COA.",
+      gap:"Public marketplaces force price visibility — a threat to your channel. Brokers keep it discreet but are opaque and slow, and you lose control of where material lands.",
+      live:["Pricing is never published — every lot is quote-only","Verified-broker layer keeps deals discreet","SDS/COA-first listings protect traceability"],
+      roadmap:"Anonymous / blind listing with channel controls — hide identity & price, exclude your own contract accounts or region.",
+      cta:{label:"List surplus",href:"sell.html"} },
+    { icon:"truck", type:"Distributors", persona:"You move it both ways",
+      matters:"Margin and inventory turns. You run 15–30% excess and lose 2–5% margin when stock isn't optimised — and you're both a seller of slow movers and a buyer of below-market gaps.",
+      gap:"Spend analytics tell you 'TiO2 is up 12%' but not whether that's the market or one supplier taking margin. There's no fast two-sided channel to dump slow stock and opportunistically buy under market.",
+      live:["Buy below-market surplus, personalized to your industries","Aggregated catalog across many brokers in one place","RFQ across multiple brokers at once"],
+      roadmap:"A two-sided inventory dashboard — per SKU you hold: list-to-sell-here vs carrying cost, beside matching below-market buys.",
+      cta:{label:"Browse the marketplace",href:"buy.html"} },
+    { icon:"flask", type:"Formulators & contract blenders", persona:"You buy to spec",
+      matters:"Batch consistency and exact-spec equivalence — above price. A bad batch ruins a run, and you keep batch records for years, so surplus is attractive only if it provably matches spec.",
+      gap:"Marketplaces list 'a chemical' but don't let you confirm a lot's measured properties (assay, impurity, viscosity) match your tolerance before you commit. The COA exists but isn't comparable to your spec.",
+      live:["Every lot carries SDS/COA + compliance badges","Filter by grade, CAS, condition and packaging","Industry-personalized to coatings, cleaning, etc."],
+      roadmap:"Spec-match checker — upload your internal spec once; every lot's COA is auto-flagged in / out of tolerance.",
+      cta:{label:"Find your inputs",href:"buy.html"} },
+    { icon:"vial", type:"Contract labs & R&D", persona:"You need the exact CAS, now",
+      matters:"Getting the <strong>exact CAS in a small quantity, fast</strong>, with a clean COA. Cost is secondary to availability — and bulk surplus lots are useless when you need 2 kg.",
+      gap:"Surplus is inherently bulk; most marketplaces don't support partial-lot or sample-quantity purchase, and long-tail CAS discovery is weak — exactly where surplus could shine.",
+      live:["Per-CAS pages for fast, exact discovery","Small-pack reagent lots (bottles) listed","Documentation on every lot"],
+      roadmap:"CAS-exact alerts + one-click sample / partial-lot request — watch a CAS, get notified, request a split.",
+      cta:{label:"Browse chemicals A–Z",href:"chemicals.html"} },
+    { icon:"shield", type:"Brokers", persona:"You hold the supply",
+      matters:"Deal flow and margin spread, while protecting your proprietary relationships. Your value is trust and information — a transparent marketplace feels like a threat.",
+      gap:"Open marketplaces are existentially threatening to brokers, yet brokers hold the surplus supply. The platform must give you a reason to participate, not route around you.",
+      live:["Aggregate your inventory via feed or POST /api/ingest","You keep pricing and the customer relationship","Free qualified RFQs — we're lead-gen + doc/logistics rails"],
+      roadmap:"A broker deal-desk — controlled-visibility listings, keep your spread, use us as tooling not a replacement.",
+      cta:{label:"How aggregation works",href:"aggregation.html"} }
+  ];
+  document.getElementById("solGrid").innerHTML = SOL.map(function(s){
+    return '<div class="card" style="display:grid;grid-template-columns:64px 1fr;gap:1.1rem;align-items:start">'
+      + '<div class="card__ic" style="margin:0;width:56px;height:56px">'+icon(s.icon)+'</div>'
+      + '<div><span class="muted" style="font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600">'+s.persona+'</span>'
+      + '<h3 style="margin:.1rem 0 .6rem">'+s.type+'</h3>'
+      + '<p style="margin:0 0 .5rem"><strong>What matters most:</strong> '+s.matters+'</p>'
+      + '<p class="muted" style="margin:0 0 .7rem"><strong>Where today\'s options fall short:</strong> '+s.gap+'</p>'
+      + '<div class="badge-row" style="margin-bottom:.5rem">'+s.live.map(function(l){return '<span class="tag tag--green">'+l+'</span>';}).join(" ")+'</div>'
+      + '<p style="margin:.2rem 0"><span class="tag tag--amber">Roadmap</span> '+s.roadmap+'</p>'
+      + '<a href="'+s.cta.href+'" class="btn btn--primary mt-1" style="padding:.5rem 1.1rem">'+s.cta.label+' &rarr;</a>'
+      + '</div></div>';
+  }).join("");
+</script>
+</body>
+</html>

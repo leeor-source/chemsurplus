@@ -286,6 +286,22 @@ img, svg { max-width: 100%; }
 }
 @media (max-width: 560px) { .ind-grid { grid-template-columns: 1fr; } }
 
+/* ---------- Savings tabs ---------- */
+.sv-tabs { display: inline-flex; gap: .3rem; background: #eef3f1; border-radius: 999px; padding: .3rem; }
+.sv-tab { border: 0; background: transparent; font-family: var(--font-head); font-weight: 600; font-size: .92rem; padding: .55rem 1.3rem; border-radius: 999px; cursor: pointer; color: var(--muted); }
+.sv-tab.is-active { background: #fff; color: var(--teal-700); box-shadow: var(--shadow-sm); }
+
+/* ---------- Market / regions ---------- */
+.region-cols { display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: stretch; }
+.region-cols__arrow { display: grid; place-items: center; color: var(--teal); font-size: 2rem; }
+.region-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.2rem; margin-bottom: .7rem; }
+.region-card h4 { margin: 0 0 .2rem; font-size: 1.02rem; }
+.region-card .role { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; font-weight: 600; }
+.region-card.is-source { border-left: 4px solid var(--mint); }
+.region-card.is-buyer { border-left: 4px solid var(--amber); }
+.spread-bar { height: 8px; border-radius: 999px; background: linear-gradient(90deg, var(--mint), var(--amber)); }
+@media (max-width: 760px) { .region-cols { grid-template-columns: 1fr; } .region-cols__arrow { transform: rotate(90deg); } }
+
 /* ---------- Articles ---------- */
 .art-hero { display: flex; align-items: center; gap: 1rem; }
 .art-hero__ic { width: 60px; height: 60px; flex: 0 0 auto; border-radius: 14px; background: linear-gradient(135deg, var(--teal), var(--mint)); color: #fff; display: grid; place-items: center; }
