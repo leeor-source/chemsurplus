@@ -1,5 +1,11 @@
 User-agent: *
 Allow: /
 
+# Crawl-budget discipline: don't waste crawl on sort/view/search/session params
+Disallow: /*?sort=
+Disallow: /*?view=
+Disallow: /*?session=
+Disallow: /*?utm_
+
 # Surplus & excess chemicals marketplace
 Sitemap: https://www.chemsurplus.com/sitemap.xml

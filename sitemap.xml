@@ -1,31 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.chemsurplus.com/</loc><lastmod>2026-05-30</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.chemsurplus.com/buy.html</loc><lastmod>2026-05-30</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.chemsurplus.com/sell.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.chemsurplus.com/how-it-works.html</loc><lastmod>2026-05-30</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.chemsurplus.com/ecosystem.html</loc><lastmod>2026-05-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.chemsurplus.com/industries/pharma.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.chemsurplus.com/industries/personal-care.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.chemsurplus.com/industries/coatings.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.chemsurplus.com/industries/cleaning.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.chemsurplus.com/industries/food.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.chemsurplus.com/industries/plastics.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.chemsurplus.com/industries/water-treatment.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.chemsurplus.com/industries/adhesives.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.chemsurplus.com/industries/oil-gas.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/excess-chemical-inventory.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/chemical-liquidation.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/obsolete-chemicals.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/off-spec-chemicals.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/short-dated-chemicals.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/overstock-chemicals.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/spot-chemicals.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/surplus-solvents.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/surplus-specialty-chemicals.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/surplus-lab-reagents.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/surplus-surfactants.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/surplus-resins-coatings.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.chemsurplus.com/categories/surplus-acids-bases.html</loc><lastmod>2026-05-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap><loc>https://www.chemsurplus.com/sitemap-core.xml</loc><lastmod>2026-05-30</lastmod></sitemap>
+  <sitemap><loc>https://www.chemsurplus.com/sitemap-industries.xml</loc><lastmod>2026-05-30</lastmod></sitemap>
+  <sitemap><loc>https://www.chemsurplus.com/sitemap-categories.xml</loc><lastmod>2026-05-30</lastmod></sitemap>
+  <sitemap><loc>https://www.chemsurplus.com/sitemap-chemicals.xml</loc><lastmod>2026-05-30</lastmod></sitemap>
+</sitemapindex>
 

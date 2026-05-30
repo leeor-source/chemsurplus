@@ -9,3 +9,5 @@ $root = $PSScriptRoot
 & (Join-Path $root "build-seo.ps1")
 Write-Host ""
 & (Join-Path $root "build-industries.ps1")
+Write-Host ""
+& (Join-Path $root "build-chemicals.ps1")
