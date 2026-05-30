@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How We Aggregate Broker Inventory | One Catalog, Many Brokers — ChemSurplus</title>
+<meta name="description" content="ChemSurplus aggregates surplus chemical inventory from many verified brokers into one clean, industry-personalized catalog. See which brokers feed the marketplace and how the aggregation flow works.">
+<link rel="canonical" href="https://www.chemsurplus.com/aggregation.html">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="How ChemSurplus Aggregates Broker Inventory">
+<meta property="og:description" content="One clean catalog aggregated from many verified surplus-chemical brokers.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.chemsurplus.com/assets/img/og-cover.svg">
+<meta name="theme-color" content="#0e6b5c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#0e6b5c"/><path d="M16 9h8M17 9v7l-6 11a2 2 0 0 0 1.7 3h14.6a2 2 0 0 0 1.7-3l-6-11V9" stroke="#16c79a" stroke-width="2" stroke-linejoin="round"/></svg>
+      ChemSurplus</a>
+    <ul class="nav__links">
+      <li><a href="buy.html">Buy chemicals</a></li><li><a href="sell.html">Sell surplus</a></li>
+      <li><a href="aggregation.html">Aggregation</a></li><li><a href="ecosystem.html">Ecosystem</a></li>
+    </ul>
+    <div class="nav__cta">
+      <a href="rfq.html" class="btn btn--ghost">RFQ list <span class="rfq-badge hidden" data-rfq-count>0</span></a>
+      <a href="buy.html" class="btn btn--primary">Browse marketplace</a>
+      <button class="nav__toggle" data-nav-toggle aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" stroke="#0a1f1b" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<section class="section--tight">
+  <div class="container">
+    <p class="eyebrow">Aggregation flow</p>
+    <h1>One catalog, aggregated from many brokers</h1>
+    <p class="lead">Surplus inventory is scattered across dozens of brokers with no shared catalog. ChemSurplus pulls each broker's feed into <strong>one clean, normalized, industry-tagged catalog</strong> — deduplicated, with SDS/COA, and personalized to your industry. The brokers keep the stock and the pricing; we provide the interface and the qualified demand.</p>
+    <div class="dash-stats mt-3">
+      <div class="dash-stat"><div class="n" id="stLots">–</div><div class="l">aggregated lots</div></div>
+      <div class="dash-stat"><div class="n" id="stBrokers">–</div><div class="l">verified brokers</div></div>
+      <div class="dash-stat"><div class="n" id="stCats">8</div><div class="l">categories</div></div>
+      <div class="dash-stat"><div class="n">SDS+COA</div><div class="l">normalized on ingest</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- flow -->
+<section class="section--tight" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="container">
+    <div class="flowmap">
+      <svg viewBox="0 0 1000 220" width="100%" role="img" aria-label="Broker feeds aggregate into one catalog">
+        <defs><marker id="a" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0 0l7 3-7 3z" fill="#0e6b5c"/></marker></defs>
+        <g font-family="Inter, sans-serif" font-size="12" fill="#0a1f1b">
+          <rect x="10" y="20" width="150" height="32" rx="8" fill="#eef3f1" stroke="#e2ece8"/><text x="85" y="40" text-anchor="middle">Broker feed (CSV/JSON)</text>
+          <rect x="10" y="62" width="150" height="32" rx="8" fill="#eef3f1" stroke="#e2ece8"/><text x="85" y="82" text-anchor="middle">Broker feed</text>
+          <rect x="10" y="104" width="150" height="32" rx="8" fill="#eef3f1" stroke="#e2ece8"/><text x="85" y="124" text-anchor="middle">Broker feed</text>
+          <rect x="10" y="146" width="150" height="32" rx="8" fill="#eef3f1" stroke="#e2ece8"/><text x="85" y="166" text-anchor="middle">+ many more</text>
+        </g>
+        <rect x="360" y="60" width="200" height="100" rx="16" fill="#0e6b5c"/>
+        <text x="460" y="98" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="15" fill="#fff">Aggregator</text>
+        <text x="460" y="120" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#bfe9dd">normalize · dedupe</text>
+        <text x="460" y="136" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#bfe9dd">tag industry · attach docs</text>
+        <rect x="700" y="60" width="200" height="100" rx="16" fill="var(--mint-soft)" stroke="#16c79a" stroke-width="2"/>
+        <text x="800" y="98" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="15" fill="#0a4a40">One catalog</text>
+        <text x="800" y="120" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#5d726c">searchable · personalized</text>
+        <text x="800" y="136" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#5d726c">pricing on request</text>
+        <g stroke="#0e6b5c" stroke-width="2.5" fill="none">
+          <path d="M162 36 C260 36 270 100 358 100" marker-end="url(#a)"/>
+          <path d="M162 78 C260 78 280 105 358 108" marker-end="url(#a)"/>
+          <path d="M162 120 H356" marker-end="url(#a)"/>
+          <path d="M162 162 C260 162 280 130 358 124" marker-end="url(#a)"/>
+          <path d="M562 110 H698" marker-end="url(#a)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- live broker sources -->
+<section class="section--tight">
+  <div class="container">
+    <div class="center"><p class="eyebrow">Live broker sources</p><h2>Brokers feeding the catalog right now</h2></div>
+    <div class="grid grid--3 mt-4" id="brokerGrid"></div>
+    <p class="center muted mt-3" style="font-size:.9rem">New brokers are onboarded as a feed — no software for them to build. <a href="sell.html">Are you a broker?</a></p>
+  </div>
+</section>
+
+<!-- intake format -->
+<section class="section--tight" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="container prose">
+    <h2>How a broker plugs in</h2>
+    <p class="muted">A broker sends inventory as a simple feed (or we ingest their existing export). Each lot is normalized into one schema, industry-tagged, and published with SDS/COA — pricing stays private and is handled per-RFQ.</p>
+    <pre style="background:#0a1f1b;color:#cfe6df;padding:1.1rem;border-radius:12px;overflow:auto;font-size:.82rem"><code>POST /api/ingest
+{
+  "broker": "altiras",
+  "lots": [
+    { "name": "Isopropyl Alcohol 99.9%", "cat": "solvents",
+      "cas": "67-63-0", "qty": "18 drums (208L)", "pkg": "Drums",
+      "condition": "Overstock", "docs": ["SDS","COA"],
+      "industries": ["cleaning","coatings","pharma"] }
+  ]
+}</code></pre>
+    <p class="muted">Locally the same data lives in <code>data/broker-feeds.json</code> and is aggregated by <code>build-catalog.ps1</code> into the live catalog.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container"><div class="footer-bottom" style="border:0;margin:0;padding:0">
+    <span>&copy; 2026 ChemSurplus &mdash; aggregating surplus from verified brokers.</span>
+    <span><a href="index.html" style="color:#9fb3ad">Home</a> &middot; <a href="buy.html" style="color:#9fb3ad">Buy</a> &middot; <a href="ecosystem.html" style="color:#9fb3ad">Ecosystem</a></span>
+  </div></div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/suppliers.js"></script>
+<script src="assets/js/industries.js"></script>
+<script src="assets/js/catalog.js"></script>
+<script src="assets/js/data.js"></script>
+<script>
+  (function(){
+    var byBroker = catalogByBroker();
+    var slugs = Object.keys(byBroker).sort(function(a,b){ return byBroker[b]-byBroker[a]; });
+    document.getElementById("stLots").textContent = getAllListings().length;
+    document.getElementById("stBrokers").textContent = slugs.length;
+    document.getElementById("brokerGrid").innerHTML = slugs.map(function(s){
+      var info = (typeof supplierInfo === "function") ? supplierInfo(s) : {name:s, tier:"Verified broker"};
+      return '<div class="card card--hover"><div class="flex between items-center">'
+        + '<div class="flex items-center gap"><div class="card__ic" style="margin:0;width:40px;height:40px">'+icon("shield")+'</div><div><h3 style="margin:0">'+info.name+'</h3>'
+        + '<span class="muted" style="font-size:.8rem">'+(info.tier||"Verified broker")+(info.since?" · since "+info.since:"")+'</span></div></div>'
+        + '<span class="tag tag--green">Live</span></div>'
+        + '<p class="muted mt-2" style="font-size:.86rem">'+(info.specialty||"Surplus chemical broker")+'</p>'
+        + '<div class="flex between items-center mt-1"><strong style="font-family:var(--font-head)">'+byBroker[s]+' lots</strong>'
+        + '<a href="buy.html" class="aud-card__go" style="color:var(--teal)">View in catalog →</a></div></div>';
+    }).join("");
+  })();
+</script>
+</body>
+</html>

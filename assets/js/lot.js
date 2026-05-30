@@ -36,7 +36,7 @@
       <span class="listing__cat">${catName(r.cat)}</span>
       <h3 class="listing__name" style="margin:.2rem 0">${r.name}</h3>
       <p class="muted" style="font-size:.85rem;margin:0">${r.qty} · ${r.pkg}</p>
-      <div class="mt-1"><b style="font-family:var(--font-head)">$${r.price.toFixed(2)}</b> <s class="muted">$${r.list.toFixed(2)}</s></div>
+      <div class="mt-1"><b style="font-family:var(--font-head)">Quote</b> <span class="muted" style="font-size:.8rem">pricing on request</span></div>
     </a>`).join("");
 
   root.innerHTML = `
@@ -48,7 +48,7 @@
         <!-- media -->
         <div class="lot__media">
           <div class="lot__art">${typeof productArt === "function" ? productArt(l) : icon(iconKey)}</div>
-          ${off > 0 ? `<span class="listing__discount">−${off}%</span>` : ""}
+          <span class="listing__discount listing__discount--surplus">Below market</span>
           <div class="lot__docs">${docStrip}</div>
         </div>
 
@@ -71,11 +71,10 @@
 
           <div class="buybox mt-3">
             <div class="buybox__price">
-              <b>$${l.price.toFixed(2)}</b> <span class="muted">${l.unit}</span>
-              <s class="muted">$${l.list.toFixed(2)}</s>
-              ${off > 0 ? `<span class="tag tag--amber">${off}% below market</span>` : ""}
+              <b>Pricing on request</b>
+              <span class="tag tag--amber">Below market</span>
             </div>
-            <p class="muted" style="font-size:.85rem;margin:.4rem 0 0">Indicative price — final pricing scales with volume &amp; terms. Request a quote for your quantity.</p>
+            <p class="muted" style="font-size:.85rem;margin:.4rem 0 0">Surplus pricing isn't listed publicly — it depends on quantity, terms and timing. Submit an RFQ and the verified broker returns a quote for your exact requirement.</p>
             <div class="flex gap wrap mt-2">
               <button class="btn btn--primary btn--lg" data-request-quote="${l.id}">Request a quote</button>
               <button class="btn btn--ghost btn--lg ${RFQ.has(l.id) ? "is-in" : ""}" data-add-rfq="${l.id}" aria-pressed="${RFQ.has(l.id)}">
@@ -118,7 +117,7 @@
   <!-- sticky request bar -->
   <div class="lot-sticky" id="lotSticky">
     <div class="container flex between items-center">
-      <div class="flex items-center gap"><strong>${l.name}</strong><span class="muted">$${l.price.toFixed(2)} ${l.unit}</span></div>
+      <div class="flex items-center gap"><strong>${l.name}</strong><span class="muted">Pricing on request</span></div>
       <div class="flex gap">
         <button class="btn btn--ghost ${RFQ.has(l.id) ? "is-in" : ""}" data-add-rfq="${l.id}"><span data-rfq-label>${RFQ.has(l.id) ? "In RFQ" : "Add to RFQ"}</span></button>
         <button class="btn btn--primary" data-request-quote="${l.id}">Request a quote</button>

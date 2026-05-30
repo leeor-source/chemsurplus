@@ -94,7 +94,7 @@ foreach ($c in $chems) {
 {"@type":"ListItem","position":2,"name":"Chemicals","item":"$domain/chemicals.html"},
 {"@type":"ListItem","position":3,"name":"$($c.name)","item":"$url"}]},
 {"@type":"Product","name":"Surplus $($c.name)","sku":"$($c.slug)","category":"$($c.cat)",
-"offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":"$($c.priceLow)","highPrice":"$($c.priceHigh)","offerCount":"$($c.offerCount)","availability":"https://schema.org/InStock"}}$chemSchema]}
+"offers":{"@type":"AggregateOffer","priceCurrency":"USD","offerCount":"$($c.offerCount)","availability":"https://schema.org/InStock"}}$chemSchema]}
 </script>
 </head>
 <body>
@@ -155,6 +155,7 @@ $(Header "../")
 <script src="../assets/js/app.js"></script>
 <script src="../assets/js/suppliers.js"></script>
 <script src="../assets/js/industries.js"></script>
+<script src="../assets/js/catalog.js"></script>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/productart.js"></script>
 <script src="../assets/js/card.js"></script>
@@ -179,7 +180,7 @@ $(Header "../")
 
 # ---------- chemicals.html index hub ----------
 $rows = ($chems | Sort-Object name | ForEach-Object {
-  "<a class=""matrix-row"" href=""chemical/$($_.slug).html""><div class=""matrix-row__ind""><strong>$($_.name)</strong></div><div class=""matrix-row__cats""><span class=""tag tag--gray"">CAS $($_.cas)</span><span class=""tag tag--gray"">$($_.cat)</span></div><div class=""matrix-row__tol""><span class=""muted"" style=""font-size:.82rem"">from `$$($_.priceLow)/$($_.unit)</span></div></a>"
+  "<a class=""matrix-row"" href=""chemical/$($_.slug).html""><div class=""matrix-row__ind""><strong>$($_.name)</strong></div><div class=""matrix-row__cats""><span class=""tag tag--gray"">CAS $($_.cas)</span><span class=""tag tag--gray"">$($_.cat)</span></div><div class=""matrix-row__tol""><span class=""tag tag--amber"">Quote</span></div></a>"
 }) -join "`n"
 
 $indexHtml = @"
@@ -239,7 +240,8 @@ function Write-Sitemap { param($file, $urls)
 Write-Sitemap "sitemap-core.xml" @(
   @{loc="$domain/";f="daily";p="1.0"}, @{loc="$domain/buy.html";f="daily";p="0.9"},
   @{loc="$domain/sell.html";f="weekly";p="0.9"}, @{loc="$domain/how-it-works.html";f="monthly";p="0.6"},
-  @{loc="$domain/ecosystem.html";f="monthly";p="0.7"}, @{loc="$domain/chemicals.html";f="weekly";p="0.8"}
+  @{loc="$domain/ecosystem.html";f="monthly";p="0.7"}, @{loc="$domain/chemicals.html";f="weekly";p="0.8"},
+  @{loc="$domain/aggregation.html";f="monthly";p="0.6"}
 )
 Write-Sitemap "sitemap-industries.xml" ($inds | ForEach-Object { @{loc="$domain/industries/$($_.slug).html";f="weekly";p="0.85"} })
 Write-Sitemap "sitemap-categories.xml" ($cats | ForEach-Object { @{loc="$domain/categories/$($_.slug).html";f="weekly";p="0.8"} })
@@ -248,7 +250,7 @@ Write-Sitemap "sitemap-chemicals.xml" ($chems | ForEach-Object { @{loc="$domain/
 $idx = New-Object System.Text.StringBuilder
 [void]$idx.AppendLine('<?xml version="1.0" encoding="UTF-8"?>')
 [void]$idx.AppendLine('<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
-foreach ($s in @("core","industries","categories","chemicals")) {
+foreach ($s in @("core","industries","categories","chemicals","articles")) {
   [void]$idx.AppendLine("  <sitemap><loc>$domain/sitemap-$s.xml</loc><lastmod>$updated</lastmod></sitemap>")
 }
 [void]$idx.AppendLine('</sitemapindex>')

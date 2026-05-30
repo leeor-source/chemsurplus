@@ -6,8 +6,12 @@
 #>
 $ErrorActionPreference = "Stop"
 $root = $PSScriptRoot
+& (Join-Path $root "build-catalog.ps1")
+Write-Host ""
 & (Join-Path $root "build-seo.ps1")
 Write-Host ""
 & (Join-Path $root "build-industries.ps1")
 Write-Host ""
 & (Join-Path $root "build-chemicals.ps1")
+Write-Host ""
+& (Join-Path $root "build-articles.ps1")

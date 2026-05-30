@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "purpose": "Niche articles / guides. build-articles.ps1 -> articles/<slug>.html (Article + FAQ schema, chemical imagery via productArt) + articles.html index. Targets informational + buyer/seller intent in the SEO plan.",
+    "lastUpdated": "2026-05-30"
+  },
+  "articles": [
+    {
+      "slug": "surplus-water-treatment-chemicals",
+      "title": "Sourcing Surplus Water-Treatment Chemicals: Coagulants, Caustics & Acids at Lower Cost",
+      "niche": "water-treatment", "nicheLabel": "Water Treatment", "icon": "water",
+      "date": "2026-05-30", "readTime": "5 min",
+      "dek": "Water treatment runs on high-volume commodity chemistry bought on price. Here's how formulators and blenders use surplus to cut input cost without compromising performance.",
+      "sections": [
+        { "h2": "Why water treatment is the ideal surplus buyer", "body": [
+          "Water treatment is among the most spec-tolerant, price-driven chemical markets there is. The core inputs - caustic soda, acids, soda ash, coagulants and commodity additives - are bought largely on landed cost, and the supplier base is enormous and fragmented. That combination makes surplus and overstock lots an easy fit: the chemistry is identical, the documentation is the same, and the only difference is the price.",
+          "Because municipal and industrial demand is steady and high-volume, blenders can consume surplus lots well within shelf life - exactly the profile that lets a seller move distressed inventory and a buyer capture a discount." ] },
+        { "h2": "What to buy as surplus", "body": [
+          "The highest-liquidity water-treatment surplus is commodity acids and bases (caustic soda, hydrochloric acid, soda ash) and pH/coagulation aids. These are shelf-stable, hazmat-shippable in bulk, and tolerant of the small spec variations that make a lot 'off-spec' for a tighter application.",
+          "Always confirm SDS and a current COA against your process spec - on ChemSurplus both are attached to every lot, so you verify before you commit." ] },
+        { "h2": "How to source it", "body": [
+          "Pick your industry on ChemSurplus and the catalog filters to water-treatment-relevant lots aggregated across verified brokers. Add the lots you want to an RFQ and we return pricing and lead time from the broker holding the stock - pricing on surplus is quoted per requirement, not listed publicly." ] }
+      ],
+      "chemicals": [
+        { "slug": "sodium-hydroxide", "name": "Caustic Soda", "cas": "1310-73-2" },
+        { "slug": "citric-acid", "name": "Citric Acid", "cas": "77-92-9" }
+      ],
+      "faqs": [
+        { "q": "Is surplus caustic soda the same as prime?", "a": "Yes - it is the same chemistry, usually overstock or off one tight parameter. Check the COA against your process and it performs identically for most water-treatment uses." }
+      ],
+      "related": "water-treatment"
+    },
+    {
+      "slug": "surplus-paint-coatings-raw-materials",
+      "title": "Cutting Raw-Material Cost in Paints & Coatings with Surplus TiO2, Resins & Solvents",
+      "niche": "coatings", "nicheLabel": "Paints & Coatings", "icon": "brush",
+      "date": "2026-05-30", "readTime": "6 min",
+      "dek": "Titanium dioxide alone can be 20-30% of a coating's raw-material cost. Surplus pigments, resins and solvents are the fastest lever a formulator has on margin.",
+      "sections": [
+        { "h2": "Where the cost hides in a coating", "body": [
+          "Pigments and resins dominate a coating's bill of materials, and titanium dioxide is the single biggest line - often 20-30% of raw-material cost. That concentration is exactly why surplus and discontinued-grade TiO2, off-spec resins and overstock solvents carry such a strong savings incentive: a small percentage off the most expensive inputs moves the whole formula's margin.",
+          "Formulation and color changes also strand perfectly good binders and pigments as 'orphan' inventory - a steady surplus stream for the next formulator." ] },
+        { "h2": "What clears well", "body": [
+          "Acrylic and styrene-acrylic emulsions, bisphenol-A epoxy resins, TiO2 and iron-oxide pigments, and solvents (toluene, MEK, ethyl acetate, acetone) all move readily as surplus into primers, industrial and lower-tier lines where a single off-spec parameter doesn't matter.",
+          "Short-dated emulsions are a particular opportunity - usable well within shelf life by a higher-throughput shop, at a deep discount." ] },
+        { "h2": "Source by industry, quote by lot", "body": [
+          "Choose Paints & Coatings on ChemSurplus and you'll see only coatings-relevant surplus, each lot attributed to the verified broker holding it with SDS/TDS attached. Build an RFQ and we return pricing for your quantity." ] }
+      ],
+      "chemicals": [
+        { "slug": "titanium-dioxide", "name": "Titanium Dioxide", "cas": "13463-67-7" },
+        { "slug": "epoxy-resin", "name": "Epoxy Resin", "cas": "25068-38-6" },
+        { "slug": "toluene", "name": "Toluene", "cas": "108-88-3" }
+      ],
+      "faqs": [
+        { "q": "Can I use off-spec TiO2 in paint?", "a": "Often yes - off-spec usually misses one prime parameter (e.g. a shade or oil-absorption tolerance) and performs well in primers and industrial coatings. Always check the COA against your formula." }
+      ],
+      "related": "coatings"
+    },
+    {
+      "slug": "surplus-surfactants-cleaning-formulators",
+      "title": "Surplus Surfactants & Builders: How Cleaning Formulators Cut Input Costs",
+      "niche": "cleaning", "nicheLabel": "Cleaning & Detergents", "icon": "spray",
+      "date": "2026-05-30", "readTime": "5 min",
+      "dek": "Contract blenders and private-label manufacturers run on the thinnest margins in chemicals. Opportunistic surplus buying is how they win on price.",
+      "sections": [
+        { "h2": "The most price-sensitive buyers in chemistry", "body": [
+          "Cleaning and detergent formulators - especially contract blenders and private-label manufacturers - compete almost entirely on price. Their inputs are commodity surfactants, builders, solvents and caustics, and they buy opportunistically, often storing raw materials on site to cut inventory cost. That makes them the ideal surplus buyer: ready to move on a good lot at the right price.",
+          "Because batches turn fast (often days), short-dated surfactant lots are consumed well within shelf life - turning a seller's looming write-off into a blender's margin." ] },
+        { "h2": "What to watch for", "body": [
+          "SLES and cocamidopropyl betaine are the workhorse surfactants; caustic soda, soda ash and citric acid round out the builder and pH chemistry. Surplus cosmetic- and technical-grade lots of these clear quickly. Confirm the COA and any required certifications (e.g. food-contact or Safer Choice scope) against your product." ] },
+        { "h2": "Buy it personalized", "body": [
+          "On ChemSurplus, pick Cleaning & Detergents and the catalog narrows to relevant surfactants, builders and solvents from verified brokers. Add lots to an RFQ for a quote on your volume." ] }
+      ],
+      "chemicals": [
+        { "slug": "sodium-laureth-sulfate", "name": "SLES 70%", "cas": "68585-34-2" },
+        { "slug": "cocamidopropyl-betaine", "name": "Cocamidopropyl Betaine", "cas": "61789-40-0" },
+        { "slug": "sodium-hydroxide", "name": "Caustic Soda", "cas": "1310-73-2" }
+      ],
+      "faqs": [
+        { "q": "Are short-dated surfactants safe to use?", "a": "Yes, provided you consume them within the stated best-by window. High-throughput blenders typically do, which is why short-dated lots are a strong value." }
+      ],
+      "related": "cleaning"
+    },
+    {
+      "slug": "wide-spec-surplus-resins-plastics",
+      "title": "Buying Wide-Spec & Surplus Resins for Plastics Compounding",
+      "niche": "plastics", "nicheLabel": "Plastics & Polymers", "icon": "grid",
+      "date": "2026-05-30", "readTime": "5 min",
+      "dek": "Off-spec resin isn't a compromise in plastics - it's a normal, accepted purchase. That makes plastics the fastest-converting surplus buyer of all.",
+      "sections": [
+        { "h2": "Wide-spec is already the norm", "body": [
+          "In plastics and polymers, 'wide-spec' or off-grade resin is a routine, well-understood purchase sold below prime through broker networks. Compounders and molders buy it on application fit and price for packaging, containers, automotive parts and electronics enclosures. That mature surplus mindset means almost no education is required - the buyer already believes.",
+          "Fillers and additives (calcium carbonate, PEG, titanium dioxide) follow the same logic: high-volume, freight-sensitive, bought on landed cost." ] },
+        { "h2": "What to source", "body": [
+          "Look for off-spec and overstock resins, PEG grades, coated calcium carbonate filler and pigment concentrates. Match the TDS to your process window and the lot performs like prime at a discount." ] },
+        { "h2": "Personalized to plastics", "body": [
+          "Select Plastics & Polymers on ChemSurplus to filter the aggregated catalog to compounding-relevant lots, then RFQ the ones you want for a quote." ] }
+      ],
+      "chemicals": [
+        { "slug": "calcium-carbonate", "name": "Calcium Carbonate", "cas": "471-34-1" },
+        { "slug": "polyethylene-glycol-peg-400", "name": "PEG-400", "cas": "25322-68-3" }
+      ],
+      "faqs": [
+        { "q": "What does wide-spec resin mean?", "a": "Resin that falls slightly outside prime specification on a parameter like melt index or color, but performs in less demanding applications - sold below prime and bought routinely by compounders." }
+      ],
+      "related": "plastics"
+    },
+    {
+      "slug": "sell-dont-dispose-off-spec-chemicals",
+      "title": "Sell, Don't Dispose: Recovering Value from Off-Spec & Obsolete Chemicals",
+      "niche": "guide", "nicheLabel": "Seller guide", "icon": "leaf",
+      "date": "2026-05-30", "readTime": "6 min",
+      "dek": "Disposing of usable chemistry costs money twice - the disposal bill and the lost value. Before you call a waste hauler, find the next user.",
+      "sections": [
+        { "h2": "Disposal is the expensive option", "body": [
+          "Hazardous-waste disposal commonly runs hundreds of dollars per ton, plus per-drum treatment and transport. For usable material, that's a double loss: you pay to destroy inventory that still has market value. Regulators including the US EPA explicitly recommend finding a legitimate reuse before disposal - chemicals that are reclaimed or reused are generally not classed as hazardous waste.",
+          "Selling surplus flips the equation: you avoid the disposal cost, recover cash, and free warehouse space - while keeping usable chemistry in the economy." ] },
+        { "h2": "What's sellable", "body": [
+          "Overstock and over-orders, off-spec and wide-spec batches, short-dated and near-expiry stock, discontinued SKUs, and plant-closure inventory are all sellable. If it has an SDS and can be legally transferred, it likely has a buyer in a more spec-tolerant industry." ] },
+        { "h2": "How selling works on ChemSurplus", "body": [
+          "List the lot with its grade, quantity, packaging and SDS/COA. We match it to qualified buyers across the industries that use it and bring you buy-out or brokerage options. Pricing stays private and is handled per-RFQ - you keep control." ] }
+      ],
+      "chemicals": [
+        { "slug": "acetone", "name": "Acetone", "cas": "67-64-1" },
+        { "slug": "glycerin", "name": "Glycerin", "cas": "56-81-5" }
+      ],
+      "faqs": [
+        { "q": "Is reused chemical still hazardous waste?", "a": "Generally no - if someone can legitimately reclaim or use the material, it is not a waste under hazardous-waste rules. Documentation (SDS/COA) supports the transfer." },
+        { "q": "What's my off-spec batch worth?", "a": "Typically 30-70% of prime value depending on the deviation, quantity and shelf life - and almost always more than the cost of disposing of it." }
+      ],
+      "related": "guide"
+    },
+    {
+      "slug": "surplus-vs-prime-chemicals",
+      "title": "Surplus vs. Prime: When Off-Spec and Overstock Chemicals Are the Smart Buy",
+      "niche": "guide", "nicheLabel": "Buyer guide", "icon": "shield",
+      "date": "2026-05-30", "readTime": "5 min",
+      "dek": "Surplus isn't lower quality - it's the same chemistry sold below market for reasons that have nothing to do with how it performs in your process.",
+      "sections": [
+        { "h2": "What 'surplus' actually means", "body": [
+          "Surplus covers several situations: prime material a company over-ordered (overstock), a batch that missed one tight parameter (off-spec / wide-spec), stock with a shorter remaining shelf life (short-dated), or a discontinued SKU. In most of these the chemistry is identical to prime - the discount reflects the seller's need to move it, not a quality gap." ] },
+        { "h2": "When it's the right call", "body": [
+          "Surplus is the smart buy when your application is spec-tolerant (coatings, cleaning, water treatment, plastics), when you can consume a short-dated lot in time, or when an off-spec parameter is irrelevant to your use. It's the wrong call only when you need certified prime for a regulated application (pharma, food) - and even there, prime-surplus overstock can fit.",
+          "The discipline that makes it safe is documentation: read the COA against your spec and the SDS for handling. On ChemSurplus both are attached to every lot." ] },
+        { "h2": "Source with confidence", "body": [
+          "Every lot is from a verified broker with SDS/COA, personalized to your industry. Build an RFQ and get a quote for your exact requirement." ] }
+      ],
+      "chemicals": [
+        { "slug": "isopropyl-alcohol", "name": "Isopropyl Alcohol", "cas": "67-63-0" },
+        { "slug": "propylene-glycol", "name": "Propylene Glycol", "cas": "57-55-6" }
+      ],
+      "faqs": [
+        { "q": "Does surplus mean lower quality?", "a": "No. Surplus is usually the same chemistry as prime, discounted because the seller needs to move overstock, off-spec or short-dated stock - not because it performs worse." }
+      ],
+      "related": "guide"
+    }
+  ]
+}
