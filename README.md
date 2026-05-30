@@ -1,5 +1,7 @@
 # ChemSurplus
 
+**🔴 Live:** https://leeor-source.github.io/chemsurplus/ · **Repo:** https://github.com/leeor-source/chemsurplus
+
 **The B2B marketplace for surplus, excess & obsolete chemicals.**
 Sellers recover value from dead stock; buyers source verified chemicals 30–70% below market — SDS/COA on every lot.
 

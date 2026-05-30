@@ -22,16 +22,18 @@ git push -u origin main
 
 ---
 
-## 1. Option A — GitHub Pages (zero config, recommended to start)
+## 1. Option A — GitHub Pages (already deployed ✅)
 
-A deploy workflow is already included at `.github/workflows/deploy.yml`.
+**This site is live at https://leeor-source.github.io/chemsurplus/**, served directly from the `main` branch (Settings → Pages → "Deploy from a branch", `main` / `/`). Every push to `main` re-publishes automatically — no build step, no extra config.
 
+To reproduce on a fresh repo:
 1. Push to GitHub (step 0).
-2. On GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. The workflow runs on every push to `main` and publishes the site.
-4. Your URL: `https://<you>.github.io/chemsurplus/`.
+2. **Settings → Pages → Build and deployment → Source: Deploy from a branch → `main` / `/root`.** Save.
+3. Wait ~1 min; your URL is `https://<you>.github.io/<repo>/`.
 
-Because all asset paths are **relative**, the site works under that sub-path with no changes. (`404.html`, `_headers`, manifest use root-absolute `/…` paths — fine on a custom domain; on the `*.github.io/chemsurplus/` sub-path the 404 page and manifest icon resolve once you add a custom domain, see §5.)
+Because all asset paths are **relative**, the site works under that sub-path unchanged. A `.nojekyll` file is included so GitHub serves files as-is.
+
+> **Optional — Actions-based deploy:** a ready workflow is kept at `deploy/github-pages-workflow.yml`. To use it, move it to `.github/workflows/deploy.yml` and set Pages source to "GitHub Actions". Note: pushing files under `.github/workflows/` requires your GitHub token to have the `workflow` scope (`gh auth refresh -s workflow`), which is why the default branch-based deploy above is the simpler path.
 
 ## 2. Option B — Netlify
 
