@@ -1,6 +1,10 @@
 # ChemSurplus
 
-**🔴 Live:** https://leeor-source.github.io/chemsurplus/ · **Repo:** https://github.com/leeor-source/chemsurplus
+**🔴 Live (full-stack, with API):** https://chemsurplus.vercel.app
+**🔵 Static mirror (GitHub Pages):** https://leeor-source.github.io/chemsurplus/
+**Repo:** https://github.com/leeor-source/chemsurplus
+
+> The Vercel URL runs the serverless backend (`/api/rfq` etc.) so RFQs submit + persist for real. The Pages URL is the static mirror (RFQs fall back to localStorage). Redeploy the backend after code changes with `vercel --prod --scope <your-scope>`; Pages auto-deploys on push. Email delivery needs a `RESEND_API_KEY`; durable storage needs an Upstash Redis integration (Vercel KV is deprecated).
 
 **The B2B marketplace for surplus, excess & obsolete chemicals.**
 Sellers recover value from dead stock; buyers source verified chemicals 30–70% below market — SDS/COA on every lot.
