@@ -285,6 +285,26 @@ img, svg { max-width: 100%; }
 }
 @media (max-width: 560px) { .ind-grid { grid-template-columns: 1fr; } }
 
+/* ---------- Ecosystem / plan page ---------- */
+.flowmap { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.4rem; box-shadow: var(--shadow-sm); }
+.legend { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+.matrix { display: flex; flex-direction: column; gap: .6rem; }
+.matrix-row { display: grid; grid-template-columns: 200px 1fr 150px; gap: 1rem; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: .9rem 1.1rem; transition: transform .12s, box-shadow .12s, border-color .12s; }
+.matrix-row:hover { transform: translateX(3px); box-shadow: var(--shadow-md); border-color: var(--mint); }
+.matrix-row__ind { display: flex; align-items: center; gap: .6rem; color: var(--ink); }
+.matrix-row__ic { width: 34px; height: 34px; border-radius: 9px; background: var(--mint-soft); color: var(--teal); display: grid; place-items: center; flex: 0 0 auto; }
+.matrix-row__ic svg { width: 19px; height: 19px; }
+.matrix-row__cats { display: flex; flex-wrap: wrap; gap: .35rem; }
+.matrix-row__tol { display: flex; flex-direction: column; gap: .2rem; align-items: flex-start; }
+.money { display: flex; flex-direction: column; gap: .6rem; }
+.money-layer { border-radius: var(--radius); padding: .9rem 1.1rem; display: flex; flex-direction: column; }
+.money-layer strong { font-family: var(--font-head); }
+.money-layer span { font-size: .82rem; opacity: .85; }
+.money-layer--1 { background: #0e6b5c; color: #fff; }
+.money-layer--2 { background: var(--mint-soft); color: var(--teal-700); }
+.money-layer--3 { background: var(--amber-soft); color: #92660a; }
+@media (max-width: 720px) { .matrix-row { grid-template-columns: 1fr; gap: .5rem; } }
+
 /* ---------- Lot detail page ---------- */
 .crumbs { font-size: .85rem; color: var(--muted); margin-bottom: 1.2rem; }
 .crumbs a { color: var(--teal-600); }

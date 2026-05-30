@@ -194,7 +194,8 @@ $sb = New-Object System.Text.StringBuilder
 [void]$sb.AppendLine('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
 $core = @(
   @{l="$domain/";p="1.0";f="daily"}, @{l="$domain/buy.html";p="0.9";f="daily"},
-  @{l="$domain/sell.html";p="0.9";f="weekly"}, @{l="$domain/how-it-works.html";p="0.6";f="monthly"}
+  @{l="$domain/sell.html";p="0.9";f="weekly"}, @{l="$domain/how-it-works.html";p="0.6";f="monthly"},
+  @{l="$domain/ecosystem.html";p="0.7";f="monthly"}
 )
 foreach ($c in $core) { [void]$sb.AppendLine("  <url><loc>$($c.l)</loc><lastmod>$updated</lastmod><changefreq>$($c.f)</changefreq><priority>$($c.p)</priority></url>") }
 foreach ($i in $inds) { [void]$sb.AppendLine("  <url><loc>$domain/industries/$($i.slug).html</loc><lastmod>$updated</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>") }
